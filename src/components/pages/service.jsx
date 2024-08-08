@@ -10,11 +10,11 @@ export default function Service(){
     const service=[
         {title:'Electricité', description:'Pour toute panne électrique ou mise aux normes de votre tableau, faites appel à des électriciens qualifiés pour des interventions rapides et sécurisées.',image:Electricite},
         {title:'Plomberie', description:"Pour les fuites, les toilettes bouchées ou les pannes d'eau chaude, faites appel à notre réseau de plombiers expérimentés  pour une intervention rapide et efficace.",image:Plomberie},
-        {title:'Climatisation', description:"Les problèmes courants de climatiseur incluent : voyants éteints ou clignotants, air insuffisant, fuite d'eau, bruit anormal, ou arrêt automatique. Si vous rencontrez ces dysfonctionnements, il est important de consulter un professionnel pour une réparation rapide.",image:Climatisation},
-        {title:'Chauffage', description:"Choisissez Services Reparation pour l'installation et la réparation de vos systèmes de chauffage. Service rapide, fiable et sur mesure pour un confort optimal et une efficacité énergétique maximale.",image:Chauffage},
-        {title:'Installation Borne De Recharge', description:"Avec Grit Service, optez pour Services Reparation pour l'installation et la réparation de bornes de recharge. Bénéficiez d'un service rapide, fiable et de haute qualité.",image:installationBorneDeRecharge},
+        {title:'Climatisation', description:"Les problèmes courants de climatiseur incluent : voyants éteints ou clignotants, air insuffisant, fuite d'eau , bruit anormal, ou arrêt automatique. Si vous rencontrez ces dysfonctionnements, il est important de consulter un professionnel pour une réparation rapide.",image:Climatisation},
+        {title:'Chauffage', description:"Choisissez EcoTech Depannage pour l'installation et la réparation de vos systèmes de chauffage. Service rapide, fiable et sur mesure pour un confort optimal et une efficacité énergétique maximale.",image:Chauffage},
+        {title:'Installation Borne De Recharge', description:"Avec Grit Service, optez pour EcoTech Depannage pour l'installation et la réparation de bornes de recharge. Bénéficiez d'un service rapide, fiable et de haute qualité.",image:installationBorneDeRecharge},
         {title:'Serrurerie', description:"Si vous avez perdu vos clés, les avez laissées à l'intérieur ou avez été victime d'une infraction, Grit Service intervient dans les 30 minutes, 24/7, pour ouvrir votre porte ou remplacer votre serrure si nécessaire.",image:Serrurerie},
-        {title:'Vitrerie & Miroiterie', description:'En cas de bris de glace ou de besoin de remplacer un miroir ou un plateau de verre, Services Reparation vous connecte à des vitriers qualifiés pour des réparations rapides et efficaces.',image:VitrerieMiroiterie},
+        {title:'Vitrerie & Miroiterie', description:'En cas de bris de glace ou de besoin de remplacer un miroir ou un plateau de verre, EcoTech Depannage vous connecte à des vitriers qualifiés pour des réparations rapides et efficaces.',image:VitrerieMiroiterie},
 
     ]
     return(
