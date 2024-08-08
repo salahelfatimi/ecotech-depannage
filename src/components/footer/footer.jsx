@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-      <footer >
-        <div className="bg-[#0276FF] py-8">
+      <footer className="z-20 flex flex-col" >
+        <div className="bg-[#0276FF] py-8 ">
             <div className=" flex flex-col gap-4 lg:flex-row items-center justify-between  container ">
            
             <Link href={'#'} className=" flex gap-4"><MapPin size={30} className=" stroke-[#fff]" /><span className=" text-xl items-center font-semibold capitalize text-center lg:text-start text-white ">Sarreguemines, France</span></Link>
