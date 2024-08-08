@@ -16,7 +16,7 @@ export default function Footer(){
         </div>
         <div className="bg-[#1E1E1E] py-8">
             <div className=" flex flex-col gap-4 lg:flex-row items-center justify-between  container ">
-            <p className={` flex  flex-col lg:flex-row  text-xl items-center font-semibold capitalize text-center lg:text-start text-white `}>
+            <p className={`select-none flex  flex-col lg:flex-row  text-xl items-center font-semibold capitalize text-center lg:text-start text-white `}>
                 Copyright &copy; {new Date().getFullYear()} . All rights are reserved by 
                 <span className=" text-[#0276FF]  uppercase ">
                 Services Reparation

@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function AboutUs(){
     const [counterOn,setcounterOn]=useState(false)
     return(
-        <div className="flex flex-col gap-10 py-14">
+        <div className="flex flex-col gap-10 py-14 select-none">
             <div className=" container flex flex-col lg:flex-row justify-between gap-16  items-center">
                 <Image 
                 src={imageabout} 

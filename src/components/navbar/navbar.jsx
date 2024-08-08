@@ -25,7 +25,7 @@ export default function Navbar(){
                 </div>
                 <div className=" bg-white py-2 ">
                     <div className=" container  flex justify-between items-center">
-                        <Image src={'/logo.svg'} width={170} height={170} priority alt="Services Reparation"/>
+                        <Link href={'/'}><Image src={'/logo.svg'} width={200} height={200} priority alt="Services Reparation"/></Link>
                         <ul className=" flex gap-10 items-center">
                             {
                                 itemNav.map((ele,index)=>{
@@ -55,7 +55,7 @@ export default function Navbar(){
                 </div>
                 <div className=" bg-white py-2  ">
                     <div className=" container  flex justify-between items-center">
-                        <Image src={'/logo.svg'} width={170} height={170} priority  alt="Services Reparation"/>
+                    <Link href={'/'}><Image src={'/logo.svg'} width={200} height={200} priority alt="Services Reparation"/></Link>
                         <div className="bg-[#0276FF] p-1">
                             <Menu size={40} className=" stroke-white "/>
                         </div>
