@@ -7,7 +7,7 @@ export default function Marche(){
         <div id='comment-ca-marche' className="bg-cover bg-center bg-[url('/marche/bg.png')]">
             <div  className="container py-24 gap-6 items-center flex justify-center flex-col  ">
                 <h2 className="font-bold text-3xl xl:text-6xl text-[#fff] text-center">COMMENT CA MARCHE ?</h2>
-                <p className=" p-4 text-center font-semibold text-2xl xl:text-4xl text-white ">Notre démarche d'intervention</p>
+                <p className=" p-4 text-center font-semibold text-2xl xl:text-4xl text-white ">Notre démarche d&apos;intervention</p>
                 <div className=' pt-8 grid  grid-cols-1 lg:grid-cols-3 gap-24 justify-between'>
                     <div className=' flex items-center flex-col justify-center gap-7'>
                         <div className=' bg-white flex items-center justify-center p-2 rounded-full'>

@@ -2,19 +2,19 @@
 import { MapPin, Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(true);
     const [activeSection, setActiveSection] = useState("#accueil");
 
-    const itemNav = [
+    const itemNav = useMemo(() => [
         { title: 'Accueil', href: '#accueil' },
         { title: 'Qui sommes nous', href: '#qui-sommes-nous' },
         { title: 'Nos services', href: '#nos-services' },
         { title: 'Comment Ca Marche', href: '#comment-ca-marche' },
         { title: 'Contactez-nous', href: '#contactez-nous' }
-    ];
+    ], []);
 
     useEffect(() => {
         const handleScroll = () => {
