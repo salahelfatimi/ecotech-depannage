@@ -13,7 +13,7 @@ export default function HomePage(){
     ]
   
     return(
-        <div className=" ">
+        <div className=" " id="accueil">
            <Carousel/>
            
             <div className="p-10 bg-[#F4F8FF]">
