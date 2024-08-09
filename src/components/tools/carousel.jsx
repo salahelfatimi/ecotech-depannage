@@ -17,14 +17,57 @@ export default function Carousel() {
     const [isDragging, setIsDragging] = useState(false);
 
     const slider = [
-        { id: 1, button:'Contactez un Électricien', image: Electricite, title: "Interventions Électriques Rapides et Sécurisées" ,description:'Pour toute panne ou mise aux normes, faites confiance à nos électriciens qualifiés.' },
-        { id: 2, button:'Appeler un Plombier', image: Plomberie, title: "Solutions de Plomberie Rapides et Fiables"  ,description:'Pour les fuites et pannes, nos plombiers expérimentés sont à votre service.' },
-        { id: 3, button:'Demander une Réparation', image: Climatisation, title: "Réparation Rapide de Votre Climatisation" ,description:'Pour tout dysfonctionnement, faites appel à nos experts en climatisation.'},
-        { id: 4, button:'Obtenir un Devis Chauffage', image: Chauffage, title: "Installation et Réparation de Chauffage" ,description:'Service rapide et fiable pour un confort thermique optimal.'},
-        { id: 5, button:'Installer une Borne de Recharge', image: Recharge, title: "Installation et Réparation de Bornes de Recharge" ,description:'Optez pour un service rapide, fiable et de haute qualité avec Grit Service.'},
-        { id: 6, button:'Urgence Serrurerie', image: Locksmith, title: "Intervention Serrurerie 24/7" ,description:'Pour toute urgence, nous intervenons en 30 minutes pour votre sécurité.'},
-        { id: 7, button:'Réparation Vitrerie', image: Vitrerie, title: "Réparations de Vitrerie Rapides et Efficaces" ,description:'Faites confiance à nos vitriers qualifiés pour tout remplacement de verre.'},
+        { 
+            id: 1, 
+            button: 'Contactez un Électricien', 
+            image: Electricite, 
+            title: "Dépannage Électrique Rapide", 
+            description: 'Pannes électriques et mise aux normes. Service rapide et sécurisé par nos électriciens qualifiés.' 
+        },
+        { 
+            id: 2, 
+            button: 'Appeler un Plombier', 
+            image: Plomberie, 
+            title: "Réparation de Plomberie", 
+            description: 'Fuites, toilettes bouchées, et pannes d’eau chaude. Plombiers expérimentés disponibles rapidement.' 
+        },
+        { 
+            id: 3, 
+            button: 'Réparation Climatisation', 
+            image: Climatisation, 
+            title: "Dépannage Climatisation", 
+            description: 'Réparations pour climatiseur avec voyants clignotants ou bruit anormal. Experts disponibles pour dépannage rapide.' 
+        },
+        { 
+            id: 4, 
+            button: 'Devis Chauffage', 
+            image: Chauffage, 
+            title: "Installation Chauffage", 
+            description: 'Installation et réparation de systèmes de chauffage pour un confort optimal et une efficacité énergétique.' 
+        },
+        { 
+            id: 5, 
+            button: 'Installer Borne de Recharge', 
+            image: Recharge, 
+            title: "Bornes de Recharge", 
+            description: 'Installation et réparation de bornes de recharge pour véhicules électriques. Service rapide et fiable.' 
+        },
+        { 
+            id: 6, 
+            button: 'Urgence Serrurerie', 
+            image: Locksmith, 
+            title: "Intervention Serrurerie", 
+            description: 'Dépannage rapide en cas de perte de clés ou d’effraction. Interventions 24/7 en 30 minutes.' 
+        },
+        { 
+            id: 7, 
+            button: 'Réparation Vitrerie', 
+            image: Vitrerie, 
+            title: "Dépannage Vitrerie", 
+            description: 'Remplacement de verre ou miroirs. Service rapide pour tous vos besoins en vitrerie.' 
+        },
     ];
+    
 
     const prev = () => setCurr(curr === 0 ? slider.length - 1 : curr - 1);
     const next = () => setCurr(curr === slider.length - 1 ? 0 : curr + 1);
@@ -70,9 +113,9 @@ export default function Carousel() {
                     <div className="flex justify-center items-center gap-2">
                         <h1 className=" hidden">EcoTech Dépannage: Votre Expert en Dépannage Urgent 24/7</h1>
                         {slider.map((ele, index) => (
-                            <div key={index} className={` text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center flex-col ${curr === index ? "block" : "hidden"}`}>
+                            <div key={index} className={` container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center flex-col ${curr === index ? "block" : "hidden"}`}>
                                 <h2  className="bg-[#ffff] p-2 font-semibold text-lg md:text-2xl text-[#0276FF]">{ele.title}</h2>
-                                <p className="font-semibold text-2xl md:text-5xl text-white text-center">{ele.description}</p>
+                                <p className="font-semibold text-2xl md:text-4xl text-white text-center">{ele.description}</p>
                                 <button onClick={()=>(handleClick())} className="bg-[#0276FF] p-4 font-semibold text-2xl text-white hover:border-white hover:bg-white/0 duration-500 border-[#0276FF] border-4">{ele.button}</button>
                             </div>
                         ))}

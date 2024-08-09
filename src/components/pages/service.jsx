@@ -8,16 +8,44 @@ import Serrurerie from "/public/service/serrurerie.jpg";
 import VitrerieMiroiterie from "/public/service/vitrerie-&-Miroiterie.jpg";
 import Link from "next/link";
 export default function Service(){
-    const service=[
-        {title:'Electricité', description:'Pour toute panne électrique ou mise aux normes de votre tableau, faites appel à des électriciens qualifiés pour des interventions rapides et sécurisées.',image:Electricite},
-        {title:'Plomberie', description:"Pour les fuites, les toilettes bouchées ou les pannes d'eau chaude, faites appel à notre réseau de plombiers expérimentés  pour une intervention rapide et efficace.",image:Plomberie},
-        {title:'Climatisation', description:"Les problèmes courants de climatiseur incluent : voyants éteints ou clignotants, air insuffisant, fuite d'eau , bruit anormal, ou arrêt automatique. Si vous rencontrez ces dysfonctionnements, il est important de consulter un professionnel pour une réparation rapide.",image:Climatisation},
-        {title:'Chauffage', description:"Choisissez EcoTech Depannage pour l'installation et la réparation de vos systèmes de chauffage. Service rapide, fiable et sur mesure pour un confort optimal et une efficacité énergétique maximale.",image:Chauffage},
-        {title:'Installation Borne De Recharge', description:"Avec Grit Service, optez pour EcoTech Depannage pour l'installation et la réparation de bornes de recharge. Bénéficiez d'un service rapide, fiable et de haute qualité.",image:installationBorneDeRecharge},
-        {title:'Serrurerie', description:"Si vous avez perdu vos clés, les avez laissées à l'intérieur ou avez été victime d'une infraction, Grit Service intervient dans les 30 minutes, 24/7, pour ouvrir votre porte ou remplacer votre serrure si nécessaire.",image:Serrurerie},
-        {title:'Vitrerie & Miroiterie', description:'En cas de bris de glace ou de besoin de remplacer un miroir ou un plateau de verre, EcoTech Depannage vous connecte à des vitriers qualifiés pour des réparations rapides et efficaces.',image:VitrerieMiroiterie},
-
-    ]
+    const service = [
+        {
+            title: 'Electricité',
+            description: 'Faites appel à des électriciens qualifiés pour la réparation rapide de pannes électriques, la mise aux normes de votre tableau électrique et des interventions sécurisées, partout à Sarreguemines et ses environs.',
+            image: Electricite
+        },
+        {
+            title: 'Plomberie',
+            description: "Réparez rapidement les fuites d'eau, les toilettes bouchées, et les pannes d'eau chaude avec nos plombiers expérimentés. Intervention d'urgence et efficace, disponible 24/7.",
+            image: Plomberie
+        },
+        {
+            title: 'Climatisation',
+            description: "Problèmes de climatisation? Nos experts en climatisation interviennent pour des pannes courantes comme les voyants éteints, fuites d'eau, ou bruit anormal. Service de réparation rapide et fiable.",
+            image: Climatisation
+        },
+        {
+            title: 'Chauffage',
+            description: "Pour l'installation et la réparation de systèmes de chauffage, choisissez EcoTech Dépannage. Service rapide, fiable, et sur mesure pour un confort thermique optimal et une efficacité énergétique améliorée.",
+            image: Chauffage
+        },
+        {
+            title: 'Installation Borne De Recharge',
+            description: "Confiez l'installation et la réparation de vos bornes de recharge à EcoTech Dépannage. Service rapide et professionnel pour la mobilité électrique, avec des solutions adaptées à vos besoins.",
+            image: installationBorneDeRecharge
+        },
+        {
+            title: 'Serrurerie',
+            description: "Perte de clés ou porte bloquée? Nos serruriers interviennent en urgence pour l'ouverture de porte ou le remplacement de serrure. Service disponible 24/7, intervention sous 30 minutes.",
+            image: Serrurerie
+        },
+        {
+            title: 'Vitrerie & Miroiterie',
+            description: 'Besoin de remplacer un vitrage ou un miroir? Faites appel à nos vitriers qualifiés pour des réparations rapides et efficaces, que ce soit pour un bris de glace ou une rénovation.',
+            image: VitrerieMiroiterie
+        },
+    ];
+    
     return(
         <div id="nos-services" className="bg-[#F4F8FF] py-8 select-none">
             <div className=" container flex flex-col gap-4">
