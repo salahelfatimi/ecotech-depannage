@@ -23,7 +23,7 @@ export default function Navbar() {
                 const section = document.querySelector(item.href);
                 if (section) {
                     const sectionTop = section.offsetTop;
-                    if (scrollY > sectionTop && scrollY < sectionTop + (section.offsetHeight / 2)) {
+                    if (scrollY > sectionTop && scrollY < sectionTop + section.offsetHeight ) {
                         setActiveSection(item.href);
                     }
                 }
