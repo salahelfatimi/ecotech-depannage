@@ -46,6 +46,12 @@ export default function Carousel() {
         if (startPos - endPos < -50) prev();
         setIsDragging(false);
     };
+
+    const handleClick = () => {
+        document.querySelector('#contactez-nous')?.scrollIntoView({ behavior: 'smooth' });
+        
+    };
+
     return (
         <div className="flex items-center justify-center cursor-grab active:cursor-grabbing	 		select-none">
            <div
@@ -60,21 +66,13 @@ export default function Carousel() {
                         <Image key={index} src={ele.image} alt={ele.title} className="h-screen min-w-full w-full object-cover object-top" placeholder="blur" title='Service de maintenance' />
                     ))}
                 </div>
-                {/* <div className="absolute inset-0  items-center justify-between hidden lg:block p-4">
-                    <button onClick={prev} className="p-1 text-[#ffff] duration-500 rounded-full">
-                        <ChevronLeft size={50} />
-                    </button>
-                    <button onClick={next} className="p-1 text-[#ffff] z-30 duration-500 rounded-full">
-                        <ChevronRight size={50} />
-                    </button>
-                </div> */}
                 <div className="absolute inset-0 justify-center flex">
                     <div className="flex justify-center items-center gap-2">
                         {slider.map((ele, index) => (
                             <div key={index} className={` text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center flex-col ${curr === index ? "block" : "hidden"}`}>
                                 <h1  className="bg-[#ffff] p-2 font-semibold text-lg md:text-2xl text-[#0276FF]">{ele.title}</h1>
                                 <p className="font-semibold text-2xl md:text-5xl text-white text-center">{ele.description}</p>
-                                <button className="bg-[#0276FF] p-4 font-semibold text-2xl text-white hover:border-white hover:bg-white/0 duration-500 border-[#0276FF] border-4">{ele.button}</button>
+                                <button onClick={()=>(handleClick())} className="bg-[#0276FF] p-4 font-semibold text-2xl text-white hover:border-white hover:bg-white/0 duration-500 border-[#0276FF] border-4">{ele.button}</button>
                             </div>
                         ))}
                     </div>

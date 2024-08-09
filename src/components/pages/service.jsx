@@ -6,6 +6,7 @@ import Chauffage from "/public/service/chauffage.jpg";
 import installationBorneDeRecharge from "/public/service/installation-Borne-De-Recharge.jpg";
 import Serrurerie from "/public/service/serrurerie.jpg";
 import VitrerieMiroiterie from "/public/service/vitrerie-&-Miroiterie.jpg";
+import Link from "next/link";
 export default function Service(){
     const service=[
         {title:'Electricité', description:'Pour toute panne électrique ou mise aux normes de votre tableau, faites appel à des électriciens qualifiés pour des interventions rapides et sécurisées.',image:Electricite},
@@ -20,12 +21,12 @@ export default function Service(){
     return(
         <div id="nos-services" className="bg-[#F4F8FF] py-8 select-none">
             <div className=" container flex flex-col gap-4">
-                <h1 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h1>
+                <h2 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h2>
                 <p className=" p-4 text-center font-semibold text-2xl xl:text-4xl text-black ">Notre champs d&apos;intervention</p>
                 <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4  justify-center">
                     {
                         service.map((ele,index)=>(
-                            <div key={index} className="last:col-start-1  xl:last:col-start-2 flex flex-col  gap-6 bg-white h-full rounded-xl ">
+                            <div key={index} className="last:col-start-1  xl:last:col-start-2 flex flex-col justify-between  gap-6 bg-white h-full rounded-xl ">
                                 <Image 
                                 src={ele.image} 
                                 placeholder="blur"
@@ -38,6 +39,7 @@ export default function Service(){
                                     <h3 className=" text-[#0276FF] font-semibold text-2xl ">{ele.title}</h3>
                                     <p className=" font-medium text-lg">{ele.description}</p>
                                 </div>
+                                <Link href={'/'} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-b-md ">voir plus</Link>
                             </div>
                         ))
                     }

@@ -34,7 +34,7 @@ export default function AboutUs(){
 
             
             </div>
-            <ScrollTrigger onEnter={()=>(setcounterOn(true))} onExit={()=>(setcounterOn(false))}>
+            <ScrollTrigger onEnter={()=>(setcounterOn(true))} >
                 <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-16 container justify-between items-center   ">
                     <div className="bg-[#0276FF] py-4 flex gap-4 flex-col items-center">
                         <span className=" bg-[#fff] p-4 font-medium  text-2xl xl:text-4xl w-fit text-[#0276FF]">{ counterOn ? <CountUp duration={10} start={1} end={35}   suffix=" +"/>:0}</span>

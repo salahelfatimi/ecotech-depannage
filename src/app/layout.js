@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${fredoka.className} flex flex-col 	  scrollbar scrollbar-thumb-[#0276FF] `}>
+      <body className={`${fredoka.className} flex flex-col  	  scrollbar scrollbar-thumb-[#0276FF] `}>
         <Navbar/>
         {children}
         <Footer/>

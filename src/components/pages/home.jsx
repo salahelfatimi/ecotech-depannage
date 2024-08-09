@@ -17,10 +17,10 @@ export default function HomePage(){
            <Carousel/>
            
             <div className="p-10 bg-[#F4F8FF]">
-                <div className=" container  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-9 lg:flex-row justify-between items-center ">
+                <div  className=" container  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-9 lg:flex-row justify-between items-center ">
                     {
                         grid.map((ele,index)=>(
-                            <div className=" flex flex-col gap-4 items-center py-8 bg-white " key={index}>
+                            <div   className=" flex flex-col gap-4 items-center py-8 bg-white " key={index}>
                                 <Image src={ele.image} className=" w-28" alt={ele.title} title={ele.title}/>
                                 <h3 className=" text-center font- font-semibold text-xl">{ele.title}</h3>
                             </div>
@@ -28,7 +28,9 @@ export default function HomePage(){
                     }
                    
                 </div>
+                
             </div>
+            
         </div>
     )
 }
