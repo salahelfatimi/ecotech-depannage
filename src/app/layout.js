@@ -11,7 +11,7 @@ export const metadata = {
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`,),
   keywords: ["Dépannage Sarreguemines, vitrier Sarreguemines, serrurier Sarreguemines, plombier Sarreguemines, électricien Sarreguemines, intervention d'urgence, service 24h/24, réparation écologique, EcoTech Dépannage."],
   alternates: {
-    canonical: "/fr",
+    canonical: "/fr-FR",
   },
   openGraph: {
     title: 'EcoTech Depannage',
@@ -39,7 +39,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr-FR">
       <body className={`${fredoka.className} flex flex-col  	  scrollbar scrollbar-thumb-[#0276FF] `}>
         <Navbar/>
         {children}
