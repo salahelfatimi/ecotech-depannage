@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(true);
-    const [activeSection, setActiveSection] = useState("");
+    const [activeSection, setActiveSection] = useState("#accueil");
 
     const itemNav = [
         { title: 'Accueil', href: '#accueil' },
@@ -18,11 +18,12 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY + 100; // Offset for triggering
+            const scrollY = window.scrollY + window.innerHeight / 2; 
             itemNav.forEach(item => {
                 const section = document.querySelector(item.href);
                 if (section) {
-                    if (scrollY > section.offsetTop && scrollY < section.offsetTop + section.offsetHeight) {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY > sectionTop && scrollY < sectionTop + (section.offsetHeight / 2)) {
                         setActiveSection(item.href);
                     }
                 }
@@ -36,7 +37,7 @@ export default function Navbar() {
     // Smooth scroll to section
     const handleClick = (href) => {
         document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-        setOpen(false); // Close mobile menu after clicking
+        setOpen(false); 
     };
 
     
