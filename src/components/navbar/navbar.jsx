@@ -55,7 +55,7 @@ export default function Navbar() {
                 </div>
                 <div className="bg-white py-2">
                     <div className="container flex justify-between items-center">
-                        <Link href={'/'}><Image src={'/logo.svg'} width={200} height={200} priority alt="Services Reparation" /></Link>
+                        <Link href={'/'} className=" flex gap-4 items-center justify-center"><Image src={'/logo.svg'} width={80} height={80} priority alt="Services Reparation" /> <h1 className="flex flex-col font-medium text-2xl">EcoTech <strong className="text-[#0276FF] ">Dépannage</strong></h1></Link>
                         <ul className="flex gap-10 items-center">
                             {itemNav.map((ele, index) => (
                                 <li key={index} className={`font-medium ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : ''}`}>
@@ -80,7 +80,7 @@ export default function Navbar() {
                 </div>
                 <div className="bg-white py-2">
                     <div className="container flex justify-between items-center">
-                        <Link href={'/'}><Image src={'/logo.svg'} width={200} height={200} priority alt="Services Reparation" /></Link>
+                        <Link href={'/'} className=" flex gap-4 items-center justify-center"><Image src={'/logo.svg'} width={80} height={80} priority alt="Services Reparation" /> <h1 className="flex flex-col font-medium text-2xl">EcoTech <strong className="text-[#0276FF] ">Dépannage</strong></h1></Link>
                         <div className="bg-[#0276FF] p-1">
                             <Menu size={40} onClick={() => { setOpen(!open) }} className="stroke-white cursor-pointer hover:rotate-180 duration-700" />
                         </div>

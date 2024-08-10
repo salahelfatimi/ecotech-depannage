@@ -111,7 +111,7 @@ export default function Carousel() {
                 </div>
                 <div className="absolute inset-0 justify-center flex">
                     <div className="flex justify-center items-center gap-2">
-                        <h1 className=" hidden">EcoTech Dépannage: Votre Expert en Dépannage Urgent 24/7</h1>
+                       
                         {slider.map((ele, index) => (
                             <div key={index} className={` container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center flex-col ${curr === index ? "block" : "hidden"}`}>
                                 <h2  className="bg-[#ffff] p-2 font-semibold text-lg md:text-2xl text-[#0276FF]">{ele.title}</h2>
