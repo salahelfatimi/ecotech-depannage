@@ -67,7 +67,7 @@ export default function Service(){
                                     <h3 className=" text-[#0276FF] font-semibold text-2xl ">{ele.title}</h3>
                                     <p className=" font-medium text-lg">{ele.description}</p>
                                 </div>
-                                <Link href={'/'} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-b-md ">voir plus</Link>
+                                {/* <Link href={'/'} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-b-md ">voir plus</Link> */}
                             </div>
                         ))
                     }
