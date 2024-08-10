@@ -9,15 +9,12 @@ export const metadata = {
   title: "EcoTech Dépannage | Urgence Plombier, Électricien, Serrurier 24/7",
   description: "EcoTech Dépannage, votre expert en dépannage à Sarreguemines, France. Vitrier, serrurier, plombier, et électricien, disponibles 7J/7, 24h/24 pour des interventions d'urgence. Contactez-nous au +33 7 71 71 05 13 pour un service rapide.",
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`,),
-  keywords: ["plombier urgence,depannage plomberie,urgence plomberie,urgence plombier,plombier Sarreguemines,Dépannage Sarreguemines, vitrier Sarreguemines, serrurier Sarreguemines, plombier Sarreguemines, électricien Sarreguemines, intervention d'urgence, service 24h/24, réparation écologique, EcoTech Dépannage."],
-  alternates: {
-    canonical: "/fr-FR",
-  },
+  keywords: ["plombier urgence,Dépannage plomberie,urgence plomberie,urgence plombier,plombier Sarreguemines,Dépannage Sarreguemines, vitrier Sarreguemines, serrurier Sarreguemines, plombier Sarreguemines, électricien Sarreguemines, intervention d'urgence, service 24h/24, réparation écologique, EcoTech Dépannage."],
   openGraph: {
     title: 'EcoTech Dépannage | Urgence Plombier, Électricien, Serrurier 24/7',
     description: "EcoTech Dépannage, votre expert en dépannage à Sarreguemines, France. Vitrier, serrurier, plombier, et électricien, disponibles 7J/7, 24h/24 pour des interventions d'urgence. Contactez-nous au +33 7 71 71 05 13 pour un service rapide.",
     url:`${process.env.NEXT_PUBLIC_BASE_URL}`,
-    siteName: "EcoTech Depannage",
+    siteName: "EcoTech Dépannage",
     images: [
       {
         url: `/opengraph-image.jpg`,
@@ -39,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr-FR">
+    <html lang="fr">
       <body className={`${fredoka.className} flex flex-col  	  scrollbar scrollbar-thumb-[#0276FF] `}>
         <Navbar/>
         {children}
