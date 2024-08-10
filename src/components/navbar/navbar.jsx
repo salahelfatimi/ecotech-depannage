@@ -37,53 +37,38 @@ export default function Navbar() {
     // Smooth scroll to section
     const handleClick = (href) => {
         document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-        setOpen(false); 
+      
     };
 
     
     return (
         <div>
-            <div className="fixed z-20 right-0 left-0 lg:block hidden">
+            <div className="fixed z-20 right-0 left-0">
                 <div className="bg-[#0276FF] p-4">
                     <div className="container flex flex-row justify-between">
                         <span className="font-semibold text-white animate-pulse">7/7 J - 24/24 H</span>
                         <div className="flex gap-6 justify-between">
-                            <Link href={'/'} className="flex gap-2 font-semibold text-white items-center"><MapPin size={25} />Sarreguemines, France</Link>
-                            <Link href={'tel:+33771710513'} className="flex gap-2 font-semibold text-white items-center"><Phone size={25} />+33 7 71 71 05 13</Link>
+                            <Link href={'/'} className="flex gap-2 font-semibold text-white items-center"><MapPin size={25} /><span className="lg:block hidden " >Sarreguemines, France</span></Link>
+                            <Link href={'tel:+33771710513'} className="flex gap-2 font-semibold text-white items-center"><Phone size={25} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></Link>
                         </div>
                     </div>
                 </div>
                 <div className="bg-white py-2">
                     <div className="container flex justify-between items-center">
                         <Link href={'/'} className=" flex gap-4 items-center justify-center"><Image src={'/logo.svg'} width={80} height={80} priority alt="Services Reparation" /> <h1 className="flex flex-col font-medium text-2xl">EcoTech <strong className="text-[#0276FF] ">Dépannage</strong></h1></Link>
-                        <ul className="flex gap-10 items-center">
-                            {itemNav.map((ele, index) => (
-                                <li key={index} className={`font-medium ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : ''}`}>
-                                    <button onClick={() => handleClick(ele.href)}>{ele.title}</button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            {/* Navbar mobile */}
-            <div className="fixed right-0 left-0 block lg:hidden z-20">
-                <div className="bg-[#0276FF] p-4">
-                    <div className="container flex flex-row justify-between">
-                        <span className="font-semibold text-white animate-pulse">7/7 J - 24/24 H</span>
-                        <div className="flex gap-6 justify-between">
-                            <Link href={'/'} className="flex gap-2 font-semibold text-white items-center"><MapPin size={25} /></Link>
-                            <Link href={'tel:+33771710513'} className="flex gap-2 font-semibold text-white items-center"><Phone size={25} /></Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-white py-2">
-                    <div className="container flex justify-between items-center">
-                        <Link href={'/'} className=" flex gap-4 items-center justify-center"><Image src={'/logo.svg'} width={80} height={80} priority alt="Services Reparation" /> <h2 className="flex flex-col font-medium text-2xl">EcoTech <strong className="text-[#0276FF] ">Dépannage</strong></h2></Link>
-                        <div className="bg-[#0276FF] p-1">
+                        <div className="bg-[#0276FF] p-1  xl:hidden block ">
                             <Menu size={40} onClick={() => { setOpen(!open) }} className="stroke-white cursor-pointer hover:rotate-180 duration-700" />
                         </div>
+                        <div className=" xl:block hidden">
+                            <ul className="flex gap-10 items-center ">
+                                {itemNav.map((ele, index) => (
+                                    <li key={index} className={`font-medium ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : ''}`}>
+                                        <button onClick={() => handleClick(ele.href)}>{ele.title}</button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                       
                         <div className={`fixed z-30 inset-0 flex items-center justify-center bg-white duration-700 transition ${open == false ? "translate-x-0" : "translate-x-full"}`}>
                             <button onClick={() => { setOpen(true) }} className="absolute top-4 right-4 text-red-600 ">
                                 <X size={40} />
