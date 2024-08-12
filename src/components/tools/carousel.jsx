@@ -75,7 +75,7 @@ export default function Carousel() {
     useEffect(() => {
         const slideInterval = setInterval(next, 10000);
         return () => clearInterval(slideInterval);
-    }, [curr]);
+    }, [curr,next]);
 
     const handleDragStart = (e) => {
         setStartPos(e.type === "touchstart" ? e.touches[0].clientX : e.clientX);
