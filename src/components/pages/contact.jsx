@@ -99,6 +99,7 @@ export default function Contact(){
                                 <option value="Installation Borne De Recharge">Installation Borne De Recharge</option>
                                 <option value="Serrurerie">Serrurerie</option>
                                 <option value="Electricité">Electricité</option>
+                                <option value="Autre">Autre</option>
                             </select>
                             <p className="text-red-500 text-xs font-medium">{!formData.purpose &&validation &&"Sélectionnez votre objectif."}</p>
                         </div>
