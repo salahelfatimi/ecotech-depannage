@@ -73,7 +73,7 @@ export default function Contact(){
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d774.5827725917268!2d7.070357967467168!3d49.1059266189007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47943577c85cc675%3A0xd3a85d8c7e61142a!2s57200%20Sarreguemines%2C%20France!5e1!3m2!1sen!2sma!4v1723206219374!5m2!1sen!2sma"
                     width="1000" // Adjust width as needed
-                    height="600"
+                    height="500"
                     className=" xl:w-1/2 w-full "
                     style={{ border: 0 }}
                     allowFullScreen=""
