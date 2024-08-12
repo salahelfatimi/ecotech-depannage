@@ -2,6 +2,7 @@ import { Fredoka } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const fredoka = Fredoka({ subsets: ["hebrew"] });
 
@@ -14,6 +15,10 @@ export const metadata = {
     title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
     description: "EcoTech Dépannage, votre expert en dépannage à Sarreguemines, France. Vitrier, serrurier, plombier, et électricien, disponibles 7J/7, 24h/24 pour des interventions d'urgence. Contactez-nous au +33 7 71 71 05 13 pour un service rapide.",
     url:`${process.env.NEXT_PUBLIC_BASE_URL}`,
+    robots: {
+      index: true,
+      follow: true,
+    },
     siteName: "EcoTech Dépannage",
     images: [
       {
@@ -37,7 +42,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${fredoka.className} flex flex-col  	  scrollbar scrollbar-thumb-[#0276FF] `}>
+       <head>
+          {/* <meta property="og:url" content={`https://www.maghrebcode.com`}/> */}
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
+        </head>
+      <body className={`${fredoka.className} flex flex-col  justify-between 	  scrollbar scrollbar-thumb-[#0276FF] `}>
         <Navbar/>
         {children}
         <Footer/>

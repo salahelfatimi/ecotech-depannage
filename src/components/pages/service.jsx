@@ -11,37 +11,37 @@ export default function Service(){
     const service = [
         {
             title: 'Electricité',
-            description: 'Faites appel à des électriciens qualifiés pour la réparation rapide de pannes électriques, la mise aux normes de votre tableau électrique et des interventions sécurisées, partout à Sarreguemines et ses environs.',
+            description: 'Vous recherchez un électricien compétent pour la réparation rapide de pannes électriques ou la mise aux normes de votre tableau électrique ?  Nos professionnels assurent des interventions sécurisées dans toute la région de Sarreguemines et ses environs. Contactez-nous pour un service rapide et fiable.',
             image: Electricite
         },
         {
             title: 'Plomberie',
-            description: "Réparez rapidement les fuites d'eau, les toilettes bouchées, et les pannes d'eau chaude avec nos plombiers expérimentés. Intervention d'urgence et efficace, disponible 24/7.",
+            description: "En cas de fuites d'eau, de toilettes bouchées, ou de pannes d'eau chaude, nos plombiers expérimentés interviennent rapidement. Disponibles 24/7, nous garantissons des réparations efficaces pour tous vos besoins en plomberie à Sarreguemines.",
             image: Plomberie
         },
         {
             title: 'Climatisation',
-            description: "Problèmes de climatisation? Nos experts en climatisation interviennent pour des pannes courantes comme les voyants éteints, fuites d'eau, ou bruit anormal. Service de réparation rapide et fiable.",
+            description: "Rencontrez-vous des problèmes de climatisation comme des voyants éteints, des fuites d'eau ou des bruits anormaux ? Nos spécialistes interviennent rapidement pour un service de réparation fiable et efficace, vous assurant un confort optimal tout au long de l'année.",
             image: Climatisation
         },
         {
             title: 'Chauffage',
-            description: "Pour l'installation et la réparation de systèmes de chauffage, choisissez EcoTech Dépannage. Service rapide, fiable, et sur mesure pour un confort thermique optimal et une efficacité énergétique améliorée.",
+            description: "Pour l'installation et la réparation de systèmes de chauffage, choisissez EcoTech Dépannage. Nous offrons un service rapide, fiable, et sur mesure pour améliorer votre confort thermique et votre efficacité énergétique.",
             image: Chauffage
         },
         {
             title: 'Installation Borne De Recharge',
-            description: "Confiez l'installation et la réparation de vos bornes de recharge à EcoTech Dépannage. Service rapide et professionnel pour la mobilité électrique, avec des solutions adaptées à vos besoins.",
+            description: "Confiez l'installation et la réparation de vos bornes de recharge à EcoTech Dépannage. Nos experts fournissent à Sarreguemines un service rapide et professionnel pour répondre à tous vos besoins en mobilité électrique.",
             image: installationBorneDeRecharge
         },
         {
             title: 'Serrurerie',
-            description: "Perte de clés ou porte bloquée? Nos serruriers interviennent en urgence pour l'ouverture de porte ou le remplacement de serrure. Service disponible 24/7, intervention sous 30 minutes.",
+            description: "Perte de clés ou porte bloquée ? Nos serruriers interviennent en urgence à Sarreguemines et ses environs pour l'ouverture de porte et le remplacement de serrure, avec une intervention garantie sous 30 minutes, disponible 24 heures sur 24, 7 jours sur 7.",
             image: Serrurerie
         },
         {
             title: 'Vitrerie & Miroiterie',
-            description: 'Besoin de remplacer un vitrage ou un miroir? Faites appel à nos vitriers qualifiés pour des réparations rapides et efficaces, que ce soit pour un bris de glace ou une rénovation.',
+            description: "Besoin de remplacer un vitrage ou un miroir ? Faites appel à nos vitriers qualifiés pour des réparations rapides et efficaces, qu'il s'agisse d'un bris de glace ou d'une rénovation.",
             image: VitrerieMiroiterie
         },
     ];
@@ -51,7 +51,7 @@ export default function Service(){
             <div className=" container flex flex-col gap-4">
                 <h2 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h2>
                 <p className=" p-4 text-center font-semibold text-2xl xl:text-4xl text-black ">Notre champs d&apos;intervention</p>
-                <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4  justify-center">
+                <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center  justify-center">
                     {
                         service.map((ele,index)=>(
                             <div key={index} className="last:col-start-1  xl:last:col-start-2 flex flex-col justify-between  gap-6 bg-white h-full rounded-xl ">

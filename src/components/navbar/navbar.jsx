@@ -12,7 +12,7 @@ export default function Navbar() {
         { title: 'Accueil', href: '#accueil' },
         { title: 'Qui sommes nous', href: '#qui-sommes-nous' },
         { title: 'Nos services', href: '#nos-services' },
-        { title: 'Comment Ca Marche', href: '#comment-ca-marche' },
+        { title: 'Comment Ça Marche', href: '#comment-ca-marche' },
         { title: 'Contactez-nous', href: '#contactez-nous' }
     ], []);
 

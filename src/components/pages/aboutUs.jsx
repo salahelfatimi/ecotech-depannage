@@ -21,12 +21,11 @@ export default function AboutUs(){
                 alt="Qui sommes nous ?"/>
                 <div className="lg:w-1/2 flex gap-4 flex-col">
                     <h2 className="text-[#0276FF] font-bold text-3xl xl:text-4xl pb-8 capitalize">Qui sommes-nous ?</h2>
-                    <span className="text-xl xl:text-2xl font-semibold text-[#EA7B22] capitalize">Services de Réparation Fiables et Écologiques</span>
-                    <p className="text-xl xl:text-2xl font-medium">
-                        Chez EcoTech Dépannage, notre équipe de professionnels qualifiés est passionnée par le dépannage en urgence, incluant
-                        la plomberie, la serrurerie, l&apos;électricité, et la vitrerie. Nous nous engageons à fournir des services de réparation, installation 
-                        et maintenance de haute qualité, disponibles 7J/7, 24h/24 à Sarreguemines, France. Faites confiance à notre expertise 
-                        pour un service rapide, fiable et écologique.
+                    <span className="text-xl xl:text-2xl font-semibold text-[#EA7B22] capitalize">EcoTech Dépannage, votre solution d'urgence 24h/24, 7j/7 à Sarreguemines !</span>
+                    <p className="text-lg xl:text-xl font-medium">
+                        Notre équipe de professionnels passionnés est experte dans une large gamme de services : plomberie, chauffage, électricité, climatisation, serrurerie, vitrerie, et installation de bornes de recharge.<br/><br/>
+                        Nous nous engageons à vous offrir des services d&apos;installation, de réparation, et de maintenance de la plus haute qualité, disponibles à tout moment.<br/><br/>
+                        Faites confiance à notre expertise pour bénéficier d&apos;un service rapide, fiable et entièrement personnalisé. Votre confort et votre sécurité sont notre priorité !
                     </p>
                 </div>
 

@@ -19,7 +19,7 @@ export default function Footer(){
             <p className={`select-none flex  flex-col lg:flex-row  text-xl items-center font-semibold capitalize text-center lg:text-start text-white `}>
                 Copyright &copy; {new Date().getFullYear()} . All rights are reserved by 
                 <span className=" text-[#0276FF]  uppercase ">
-                EcoTech Depannage
+                  ECOTECH DÉPANNAGE
                 </span>
             </p>
             <div className="flex gap-6">
