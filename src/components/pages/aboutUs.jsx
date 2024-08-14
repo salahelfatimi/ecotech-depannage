@@ -22,10 +22,13 @@ export default function AboutUs(){
                 <div className="lg:w-1/2 flex gap-4 flex-col">
                     <h2 className="text-[#0276FF] font-bold text-3xl xl:text-4xl pb-8 capitalize">Qui sommes-nous ?</h2>
                     <span className="text-xl xl:text-2xl font-semibold text-[#EA7B22] capitalize">EcoTech Dépannage, votre solution d&apos;urgence 24h/24, 7j/7 à Sarreguemines !</span>
-                    <p className="text-lg xl:text-xl font-medium">
-                        Notre équipe de professionnels passionnés est experte dans une large gamme de services : plomberie, chauffage, électricité, climatisation, serrurerie, vitrerie, et installation de bornes de recharge.<br/><br/>
-                        Nous nous engageons à vous offrir des services d&apos;installation, de réparation, et de maintenance de la plus haute qualité, disponibles à tout moment.<br/><br/>
-                        Faites confiance à notre expertise pour bénéficier d&apos;un service rapide, fiable et entièrement personnalisé. Votre confort et votre sécurité sont notre priorité !
+                    <p className="text-lg xl:text-xl ">
+                      
+                        Notre équipe de <span className="font-medium text-[#0276FF] ">professionnels passionnés</span>  est experte dans une large gamme de services de dépannage en plomberie, chauffage, électricité, climatisation, serrurerie, vitrerie, et de réparation de bornes de recharge.<br/><br/>
+
+                        Nous nous engageons à vous offrir des <span className="font-medium text-[#0276FF] ">services de réparation et de maintenance</span>   de la plus haute qualité, disponibles à tout moment.<br/><br/>
+
+                        <span className="font-medium text-[#0276FF] ">Faites confiance à notre expertise</span> pour bénéficier d&apos;un service <span className="font-medium text-[#0276FF] ">rapide, fiable et entièrement personnalisé.</span> Votre confort et votre sécurité sont notre priorité !
                     </p>
                 </div>
 
