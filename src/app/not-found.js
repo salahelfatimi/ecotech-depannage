@@ -13,7 +13,7 @@ export default function NotFound() {
           className=" underline underline-offset-4  font-bold text-xl text-blue-600 flex  duration-700 items-center gap-2"
           href="/"
         >
-          Retour à l'accueil
+          Retour à l&apos;accueil
         </Link>
       </div>
     </>
