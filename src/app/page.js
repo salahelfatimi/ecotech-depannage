@@ -8,8 +8,8 @@ import PhoneIcon from "@/components/tools/phoneIcon";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 
-export default async function Home() {
-  await new Promise(resolve => setTimeout(resolve, 3000));
+export default  function Home() {
+  
   return (
     <main className=" flex flex-col ">
       <PhoneIcon/>
