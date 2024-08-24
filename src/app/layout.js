@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
        <head>
-          {/* <meta property="og:url" content={`https://www.maghrebcode.com`}/> */}
+          <meta property="og:url" content={`https://www.ecotechdepannage.com`}/>
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
         </head>
       <body className={`${fredoka.className} 	  scrollbar scrollbar-thumb-[#0276FF] `}>
