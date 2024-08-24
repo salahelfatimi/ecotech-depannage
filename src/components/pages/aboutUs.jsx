@@ -24,7 +24,7 @@ export default function AboutUs(){
                     <span className="text-xl xl:text-2xl font-semibold text-[#EA7B22] capitalize">EcoTech Dépannage, votre solution d&apos;urgence 24h/24, 7j/7 à Sarreguemines !</span>
                     <p className="text-lg xl:text-xl ">
                       
-                        Notre équipe de <span className="font-medium text-[#0276FF] ">professionnels passionnés</span>  est experte dans une large gamme de services de dépannage en plomberie, chauffage, électricité, climatisation, serrurerie, vitrerie, et de réparation de bornes de recharge.<br/><br/>
+                        Notre équipe de <span className="font-medium text-[#0276FF] ">professionnels passionnés</span> est experte dans une large gamme de services de dépannage en plomberie, chauffage, électricité, climatisation, serrurerie, vitrerie, et de réparation de bornes de recharge.<br/><br/>
 
                         Nous nous engageons à vous offrir des <span className="font-medium text-[#0276FF] ">services de réparation et de maintenance</span>   de la plus haute qualité, disponibles à tout moment.<br/><br/>
 

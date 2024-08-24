@@ -82,11 +82,11 @@ export default function Contact(){
                 ></iframe>                
                 <form onSubmit={sendEmail} className="flex flex-col gap-4  xl:w-1/2 w-full ">
                         <div className=" flex flex-col gap-2 w-full">
-                            <input  value={formData.fullName} onChange={handleInputChange} type="text" name="fullName" id="fullName" placeholder=" Nom et Prenom" className={`${!formData.fullName && validation && "border-red-500 placeholder:text-red-500"}  placeholder:font-medium capitalize placeholder:text-[#0276FF] text-[#22242B] px-4 h-14 rounded   border-[#0276FF] border-2 bg-[#F4F8FF]`} />
+                            <input  value={formData.fullName} onChange={handleInputChange} type="text" name="fullName" id="fullName" placeholder=" Nom et Prénom" className={`${!formData.fullName && validation && "border-red-500 placeholder:text-red-500"}  placeholder:font-medium capitalize placeholder:text-[#0276FF] text-[#22242B] px-4 h-14 rounded   border-[#0276FF] border-2 bg-[#F4F8FF]`} />
                             <p className="text-red-500 text-xs font-medium">{!formData.fullName &&validation &&"Veuillez entrer votre nom complet."}</p>
                         </div>
                         <div className=" flex flex-col gap-2 w-full">
-                            <input value={formData.phone} onChange={handleInputChange}  type="tel" name="phone" id="phone" placeholder="Telephone" className={`${!formData.phone && validation && "border-red-500 placeholder:text-red-500"} px-4 rounded text-[#22242B]  capitalize border-[#0276FF] placeholder:font-medium placeholder:text-[#0276FF] border-2 bg-[#F4F8FF] h-14`}/>
+                            <input value={formData.phone} onChange={handleInputChange}  type="tel" name="phone" id="phone" placeholder="Téléphone" className={`${!formData.phone && validation && "border-red-500 placeholder:text-red-500"} px-4 rounded text-[#22242B]  capitalize border-[#0276FF] placeholder:font-medium placeholder:text-[#0276FF] border-2 bg-[#F4F8FF] h-14`}/>
                             <p className="text-red-500 text-xs font-medium">{!formData.phone &&validation &&"Veuillez entrer votre numéro de téléphone."}</p>
                         </div>
                         <div className=" flex flex-col gap-2 w-full">
@@ -105,7 +105,7 @@ export default function Contact(){
                         </div>
                         <div className=" flex flex-col gap-2 w-full">
                             <textarea value={formData.msg} onChange={handleInputChange}  placeholder=" Votre Message "  className={`${!formData.msg && validation && "border-red-500 placeholder:text-red-500 "}   placeholder:font-medium capitalize placeholder:text-[#0276FF] text-[#22242B] p-4 rounded   border-[#0276FF] border-2 bg-[#F4F8FF]`} rows={6} name="msg" id=""></textarea>
-                            <p className="text-red-500 text-xs font-medium">{!formData.msg &&validation &&"Veuillez sélectionner le but de votre message."}</p>
+                            <p className="text-red-500 text-xs font-medium">{!formData.msg &&validation &&"Veuillez sélectionner le but de Votre Message."}</p>
                         </div>
                         <button type="submit" className="bg-[#0276FF] py-4 hover:text-[#0276FF] hover:bg-[#F4F8FF] border-2 border-[#0276FF] duration-500 hover: font-bold text-white "> {isLoading ? "Envoi en cours..." : 'Envoyer'} </button>
                     

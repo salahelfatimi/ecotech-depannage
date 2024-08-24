@@ -6,7 +6,7 @@ import { useState, useEffect, useMemo } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(true);
-    const [activeSection, setActiveSection] = useState("#accueil");
+    const [activeSection, setActiveSection] = useState("");
 
     const itemNav = useMemo(() => [
         { title: 'Accueil', href: '#accueil' },

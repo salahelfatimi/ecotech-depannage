@@ -11,7 +11,7 @@ export default function Service(){
     const service = [
         {
             title: 'Electricité',
-            description: 'Vous recherchez un électricien compétent pour la réparation rapide de pannes électriques ou la mise aux normes de votre tableau électrique ?  Nos professionnels assurent des interventions sécurisées dans toute la région de Sarreguemines et ses environs. Contactez-nous pour un service rapide et fiable.',
+            description: 'Vous recherchez un électricien compétent pour la réparation rapide de pannes électriques ou la mise aux normes de votre tableau électrique ? Nos professionnels assurent des interventions sécurisées dans toute la région de Sarreguemines et ses environs. Contactez-nous pour un service rapide et fiable.',
             image: Electricite
         },
         {
@@ -26,12 +26,12 @@ export default function Service(){
         },
         {
             title: 'Chauffage',
-            description: "Pour l'installation et la réparation de systèmes de chauffage, choisissez EcoTech Dépannage. Nous offrons un service rapide, fiable, et sur mesure pour améliorer votre confort thermique et votre efficacité énergétique.",
+            description: "Pour la réparation de systèmes de chauffage, choisissez EcoTech Dépannage. Nous offrons un service rapide, fiable, et sur mesure pour améliorer votre confort thermique et votre efficacité énergétique.",
             image: Chauffage
         },
         {
-            title: 'Installation Borne De Recharge',
-            description: "Confiez l'installation et la réparation de vos bornes de recharge à EcoTech Dépannage. Nos experts fournissent à Sarreguemines un service rapide et professionnel pour répondre à tous vos besoins en mobilité électrique.",
+            title: 'Bornes De Recharge',
+            description: "Confiez l’installation de vos bornes de recharge à EcoTech Dépannage. Nos experts fournissent à Sarreguemines un service rapide et professionnel pour répondre à tous vos besoins en mobilité électrique.",
             image: installationBorneDeRecharge
         },
         {

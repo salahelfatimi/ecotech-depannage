@@ -46,10 +46,12 @@ export default function RootLayout({ children }) {
           {/* <meta property="og:url" content={`https://www.maghrebcode.com`}/> */}
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
         </head>
-      <body className={`${fredoka.className} flex flex-col  justify-between 	  scrollbar scrollbar-thumb-[#0276FF] `}>
-        <Navbar/>
-        {children}
-        <Footer/>
+      <body className={`${fredoka.className} 	  scrollbar scrollbar-thumb-[#0276FF] `}>
+        <div className="flex flex-col h-screen justify-between ">
+          <Navbar/>
+          {children}
+          <Footer/>
+        </div>
         </body>
     </html>
   );
