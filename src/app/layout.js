@@ -11,6 +11,11 @@ export const metadata = {
   description: "EcoTech Dépannage, votre expert en dépannage à Sarreguemines, France. Vitrier, serrurier, plombier, et électricien, disponibles 7J/7, 24h/24 pour des interventions d'urgence. Contactez-nous au +33 7 71 71 05 13 pour un service rapide.",
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`,),
   keywords: ["plombier urgence,Dépannage plomberie,urgence plomberie,urgence plombier,plombier Sarreguemines,Dépannage Sarreguemines, vitrier Sarreguemines, serrurier Sarreguemines, plombier Sarreguemines, électricien Sarreguemines, intervention d'urgence, service 24h/24, EcoTech Dépannage,dépannage d'urgence 24h/24, dépannage 7j/7 Sarreguemines, plombier urgence Sarreguemines, serrurier urgence Sarreguemines, vitrier Sarreguemines urgence", "électricien Sarreguemines 24h/24, intervention rapide Sarreguemines, EcoTech Dépannage urgence, réparation écologique Sarreguemines"],
+  alternates: {
+    canonical: "/",
+
+    
+  },
   openGraph: {
     title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
     description: "EcoTech Dépannage, votre expert en dépannage à Sarreguemines, France. Vitrier, serrurier, plombier, et électricien, disponibles 7J/7, 24h/24 pour des interventions d'urgence. Contactez-nous au +33 7 71 71 05 13 pour un service rapide.",
