@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-const fredoka = Fredoka({ subsets: ["latin-ext"], weight:'400' });
+const fredoka = Fredoka({ subsets: ["latin-ext"] });
 
 export const metadata = {
   title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
