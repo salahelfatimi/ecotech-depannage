@@ -22,7 +22,7 @@ export default function HomePage(){
                         grid.map((ele,index)=>(
                             <div   className=" flex flex-col gap-4 items-center py-8 bg-white " key={index}>
                                 <Image src={ele.image} className=" w-28" alt={ele.title} title={ele.title}/>
-                                <h3 className=" text-center font- font-semibold text-xl">{ele.title}</h3>
+                                <h3 className=" text-center font-medium text-xl">{ele.title}</h3>
                             </div>
                         ))
                     }

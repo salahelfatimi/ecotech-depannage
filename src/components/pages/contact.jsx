@@ -68,7 +68,7 @@ export default function Contact(){
                     className: " bg-[#1e1e1e] text-[#0276FF]",
                 }}
             />
-            <h2 className="font-bold text-3xl xl:text-6xl bg-[#0276FF] text-white p-4 text-center">contactez-nous</h2>
+            <h2 className="font-semibold text-3xl xl:text-6xl bg-[#0276FF] text-white p-4 text-center">contactez-nous</h2>
             <div className=" container w-full flex-col xl:flex-row  gap-16 py-16 xl:px-24 flex p-8  justify-between items-center ">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d774.5827725917268!2d7.070357967467168!3d49.1059266189007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47943577c85cc675%3A0xd3a85d8c7e61142a!2s57200%20Sarreguemines%2C%20France!5e1!3m2!1sen!2sma!4v1723206219374!5m2!1sen!2sma"
@@ -107,7 +107,7 @@ export default function Contact(){
                             <textarea value={formData.msg} onChange={handleInputChange}  placeholder=" Votre Message "  className={`${!formData.msg && validation && "border-red-500 placeholder:text-red-500 "}   placeholder:font-medium capitalize placeholder:text-[#0276FF] text-[#22242B] p-4 rounded   border-[#0276FF] border-2 bg-[#F4F8FF]`} rows={6} name="msg" id=""></textarea>
                             <p className="text-red-500 text-xs font-medium">{!formData.msg &&validation &&"Veuillez sélectionner le but de Votre Message."}</p>
                         </div>
-                        <button type="submit" className="bg-[#0276FF] py-4 hover:text-[#0276FF] hover:bg-[#F4F8FF] border-2 border-[#0276FF] duration-500 hover: font-bold text-white "> {isLoading ? "Envoi en cours..." : 'Envoyer'} </button>
+                        <button type="submit" className="bg-[#0276FF] py-4 hover:text-[#0276FF] hover:bg-[#F4F8FF] border-2 border-[#0276FF] duration-500 font-medium text-white "> {isLoading ? "Envoi en cours..." : 'Envoyer'} </button>
                     
                 </form>
             </div>

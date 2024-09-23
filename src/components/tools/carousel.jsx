@@ -114,9 +114,9 @@ export default function Carousel() {
                        
                         {slider.map((ele, index) => (
                             <div key={index} className={` container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center flex-col ${curr === index ? "block" : "hidden"}`}>
-                                <h2  className="bg-[#ffff] p-2 font-semibold text-lg md:text-2xl text-[#0276FF]">{ele.title}</h2>
-                                <p className="font-semibold text-2xl md:text-4xl text-white text-center">{ele.description}</p>
-                                <button onClick={()=>(handleClick())} className="bg-[#0276FF] p-4 font-semibold text-2xl text-white hover:border-white hover:bg-white/0 duration-500 border-[#0276FF] border-4">{ele.button}</button>
+                                <h2  className="bg-[#ffff] p-2 font-medium text-lg md:text-2xl text-[#0276FF]">{ele.title}</h2>
+                                <p className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</p>
+                                <button onClick={()=>(handleClick())} className="bg-[#0276FF] p-4 font-medium text-2xl text-white hover:border-white hover:bg-white/0 duration-500 border-[#0276FF] border-4">{ele.button}</button>
                             </div>
                         ))}
                     </div>

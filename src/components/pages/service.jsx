@@ -50,7 +50,7 @@ export default function Service(){
         <div id="nos-services" className="bg-[#F4F8FF] py-8 select-none">
             <div className=" container flex flex-col gap-4">
                 <h2 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h2>
-                <p className=" p-4 text-center font-semibold text-2xl xl:text-4xl text-black ">Notre champs d&apos;intervention</p>
+                <p className=" p-4 text-center text-2xl xl:text-3xl text-black ">Notre champs d&apos;intervention</p>
                 <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center  justify-center">
                     {
                         service.map((ele,index)=>(
@@ -64,8 +64,8 @@ export default function Service(){
                                 />
                                 
                                 <div className=" flex flex-col items-center gap-6 text-center p-4 ">
-                                    <h3 className=" text-[#0276FF] font-semibold text-2xl ">{ele.title}</h3>
-                                    <p className=" font-medium text-lg">{ele.description}</p>
+                                    <h3 className=" text-[#0276FF] font-medium text-2xl ">{ele.title}</h3>
+                                    <p className="  text-lg">{ele.description}</p>
                                 </div>
                                 {/* <Link href={'/'} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-b-md ">voir plus</Link> */}
                             </div>

@@ -48,14 +48,14 @@ export default function Navbar() {
                     <div className="container flex flex-row justify-between">
                         <span className="font-semibold text-white animate-pulse">7/7 J - 24/24 H</span>
                         <div className="flex gap-6 justify-between">
-                            <Link href={'https://maps.app.goo.gl/gtaWxSsq7yA2k8fk9'} className="flex gap-2 font-semibold text-white items-center"><MapPin size={25} /><span className="lg:block hidden " >Sarreguemines, France</span></Link>
-                            <Link href={'tel:+33771710513'} className="flex gap-2 font-semibold text-white items-center"><Phone size={25} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></Link>
+                            <Link href={'https://maps.app.goo.gl/gtaWxSsq7yA2k8fk9'} className="flex gap-2 font-medium text-white items-center"><MapPin size={25} /><span className="lg:block hidden " >Sarreguemines, France</span></Link>
+                            <Link href={'tel:+33771710513'} className="flex gap-2 font-medium text-white items-center"><Phone size={25} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></Link>
                         </div>
                     </div>
                 </div>
                 <div className="bg-white py-2">
                     <div className="container flex justify-between items-center">
-                        <Link href={'/'} className=" flex gap-4 items-center justify-center"><Image src={'/logo.svg'} width={80} height={80} priority alt="Services Reparation" /> <h1 className="flex flex-col font-medium text-2xl">EcoTech <strong className="text-[#0276FF] ">Dépannage</strong></h1></Link>
+                        <Link href={'/'} className=" flex gap-4 items-center justify-center"><Image src={'/logo.svg'} width={80} height={80} priority alt="Services Reparation" /> <h1 className="flex flex-col font-medium text-2xl">EcoTech <span className="text-[#0276FF] ">Dépannage</span></h1></Link>
                         <div className="bg-[#0276FF] p-1  xl:hidden block ">
                             <Menu size={40} onClick={() => { setOpen(!open) }} className="stroke-white cursor-pointer hover:rotate-180 duration-700" />
                         </div>
