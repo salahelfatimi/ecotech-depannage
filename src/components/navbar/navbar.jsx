@@ -73,9 +73,9 @@ export default function Navbar() {
                             <button onClick={() => { setOpen(true) }} className="absolute top-4 right-4 text-red-600 ">
                                 <X size={40} />
                             </button>
-                            <div className="flex flex-col items-center gap-12 text-2xl font-bold">
+                            <div className="flex flex-col items-center gap-12 text-2xl font-medium">
                                 {itemNav.map((ele, index) => (
-                                    <button key={index}  className={` text-xl hover:duration-700 transition font-semibold ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : 'hover:text-[#0276FF] text-black'}`} onClick={() => {handleClick(ele.href), setOpen(!open)}}>
+                                    <button key={index}  className={` text-xl hover:duration-700 transition font-medium ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : 'hover:text-[#0276FF] text-black'}`} onClick={() => {handleClick(ele.href), setOpen(!open)}}>
                                         {ele.title}
                                     </button>
                                 ))}
