@@ -47,7 +47,7 @@ export default function Service(){
     ];
     
     return(
-        <div id="nos-services" className="bg-[#F4F8FF] py-8 select-none">
+        <div id="nos-services" className="bg-[#F4F8FF] py-8 ">
             <div className=" container flex flex-col gap-4">
                 <h2 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h2>
                 <p className=" p-4 text-center text-2xl xl:text-3xl text-black ">Notre champs d&apos;intervention</p>
