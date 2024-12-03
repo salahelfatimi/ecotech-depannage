@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
           async 
           src="https://www.googletagmanager.com/gtag/js?id=AW-16782332928" 
         />
-        <Script>
+        <Script id="google-ads-gtag">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
