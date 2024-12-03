@@ -2,17 +2,27 @@
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Contact(){
     const [isLoading, setIsLoading] = useState(false);
     const [validation, setValidation] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false); 
     const [formData, setFormData] = useState({
         fullName: "",
         phone: "",
         purpose: "",
         msg:""
     });
+    
+
+    useEffect(() => {
+      if (isSubmitted && window.gtag) {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-16782332928/39X-CIvP9PEZEICouMI-', 
+        });
+      }
+    }, [isSubmitted]);
 
     const sendEmail = async (e) => {
         e.preventDefault();
@@ -44,6 +54,7 @@ export default function Contact(){
             });
             setValidation(false);
             setIsLoading(false);
+            setIsSubmitted(true);
             toast.dismiss(loadingToast);
             toast.success("Message envoyé avec succès !");
             }
