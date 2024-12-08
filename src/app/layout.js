@@ -62,6 +62,18 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-16782332928');
           `}
         </Script>
+        <Script>
+          {`gtag('event', 'conversion_event_page_view', {
+            // <event_parameters>
+          });`}
+        </Script>
+        <Script>
+          {`gtag('config', 'AW-16782332928/TjtCCI_S4fQZEICouMI-', {
+            'phone_conversion_number': '+33 7 71 71 05 13'
+          });`}
+        </Script>
+
+
       </head>
       <body className={`${fredoka.className} scrollbar scrollbar-thumb-[#0276FF]`}>
         <div className="flex flex-col h-screen justify-between ">
