@@ -62,15 +62,15 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-16782332928');
           `}
         </Script>
-        <Script>
-          {`gtag('event', 'conversion_event_page_view', {
-            // <event_parameters>
-          });`}
-        </Script>
-        <Script>
-          {`gtag('config', 'AW-16782332928/TjtCCI_S4fQZEICouMI-', {
-            'phone_conversion_number': '+33 7 71 71 05 13'
-          });`}
+
+        {/* Conversion Event Tracking */}
+        <Script id="google-ads-conversion">
+          {`
+            gtag('event', 'conversion', {
+              'send_to': 'AW-16782332928/TjtCCI_S4fQZEICouMI-',
+              'phone_conversion_number': '+33 7 71 71 05 13'
+            });
+          `}
         </Script>
 
 
