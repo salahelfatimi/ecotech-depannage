@@ -76,7 +76,7 @@ export default function Carousel() {
            <div className="h-screen overflow-hidden relative"  ref={emblaRef}>
                 <div  className="flex transition-transform ease-out duration-700">
                     {slider.map((ele, index) => (
-                        <div className=" relative h-screen min-w-full w-full">
+                        <div key={index} className=" relative h-screen min-w-full w-full">
                             <Image key={index} src={ele.image} alt={ele.title} className="  object-cover object-top  h-screen min-w-full w-full" placeholder="blur" title='Service de maintenance' />
                             <div key={index} className={` absolute inset-0 container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center justify-center flex-col `}>
                                 <h2  className="bg-[#ffff] p-2 font-medium text-lg md:text-2xl text-[#0276FF]">{ele.title}</h2>
