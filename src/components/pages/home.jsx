@@ -16,13 +16,13 @@ export default function HomePage(){
         <div className=" " id="accueil">
            <Carousel/>
            
-            <div className="p-10 bg-[#F4F8FF]">
+            <div className="p-10 ">
                 <div  className=" container  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-9 lg:flex-row justify-between items-center ">
                     {
                         grid.map((ele,index)=>(
-                            <div   className=" flex flex-col gap-4 items-center py-8 bg-white " key={index}>
-                                <Image src={ele.image} className=" w-28" alt={ele.title} title={ele.title}/>
-                                <h3 className=" text-center font-medium text-xl">{ele.title}</h3>
+                            <div   className=" flex flex-col gap-4 items-center py-4 bg-white border-[#0276FF] border-4 rounded-3xl " key={index}>
+                                <Image src={ele.image} className=" w-24" alt={ele.title} title={ele.title}/>
+                                <h3 className=" text-center font-bold text-xl text-[#0276FF]">{ele.title}</h3>
                             </div>
                         ))
                     }

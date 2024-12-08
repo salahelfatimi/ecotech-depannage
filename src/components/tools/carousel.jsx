@@ -1,7 +1,9 @@
 "use client"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Phone } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 import Electricite from "/public/carousel/Electricite.png";
 import Climatisation from "/public/carousel/Climatisation.png";
 import Plomberie from "/public/carousel/Plomberie.png";
@@ -10,12 +12,9 @@ import Recharge from "/public/carousel/Recharge.png";
 import Locksmith from "/public/carousel/Locksmith.png";
 import Vitrerie from "/public/carousel/Vitrerie.png";
 import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Carousel() {
-    const [curr, setCurr] = useState(0);
-    const [startPos, setStartPos] = useState(0);
-    const [isDragging, setIsDragging] = useState(false);
-
     const slider = [
         { 
             id: 1, 
@@ -68,59 +67,26 @@ export default function Carousel() {
         },
     ];
     
-
-    const prev = () => setCurr(curr === 0 ? slider.length - 1 : curr - 1);
-    const next = () => setCurr(curr === slider.length - 1 ? 0 : curr + 1);
-
-    useEffect(() => {
-        const slideInterval = setInterval(next, 10000);
-        return () => clearInterval(slideInterval);
-    }, [curr,next]);
-
-    const handleDragStart = (e) => {
-        setStartPos(e.type === "touchstart" ? e.touches[0].clientX : e.clientX);
-        setIsDragging(true);
-    };
-
-    const handleDragEnd = (e) => {
-        if (!isDragging) return;
-        const endPos = e.type === "touchend" ? e.changedTouches[0].clientX : e.clientX;
-        if (startPos - endPos > 50) next();
-        if (startPos - endPos < -50) prev();
-        setIsDragging(false);
-    };
-
-    const handleClick = () => {
-        document.querySelector('#contactez-nous')?.scrollIntoView({ behavior: 'smooth' });
-        
-    };
+    const [emblaRef] = useEmblaCarousel({ loop: true }, [
+        Autoplay({ stopOnInteraction:false ,speed: 0.7  })
+      ])
 
     return (
         <div className="flex items-center justify-center cursor-grab active:cursor-grabbing	 		select-none">
-           <div
-            className="h-screen overflow-hidden relative"
-            onMouseDown={handleDragStart}
-            onMouseUp={handleDragEnd}
-            onTouchStart={handleDragStart}
-            onTouchEnd={handleDragEnd}
-        >
-                <div style={{ transform: `translateX(-${curr * 100}%)` }} className="flex transition-transform ease-out duration-700">
+           <div className="h-screen overflow-hidden relative"  ref={emblaRef}>
+                <div  className="flex transition-transform ease-out duration-700">
                     {slider.map((ele, index) => (
-                        <Image key={index} src={ele.image} alt={ele.title} className="h-screen min-w-full w-full object-cover object-top" placeholder="blur" title='Service de maintenance' />
-                    ))}
-                </div>
-                <div className="absolute inset-0 justify-center flex">
-                    <div className="flex justify-center items-center gap-2">
-                       
-                        {slider.map((ele, index) => (
-                            <div key={index} className={` container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center flex-col ${curr === index ? "block" : "hidden"}`}>
+                        <div className=" relative h-screen min-w-full w-full">
+                            <Image key={index} src={ele.image} alt={ele.title} className="  object-cover object-top  h-screen min-w-full w-full" placeholder="blur" title='Service de maintenance' />
+                            <div key={index} className={` absolute inset-0 container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center justify-center flex-col `}>
                                 <h2  className="bg-[#ffff] p-2 font-medium text-lg md:text-2xl text-[#0276FF]">{ele.title}</h2>
                                 <p className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</p>
-                                <button onClick={()=>(handleClick())} className="bg-[#0276FF] p-4 font-medium text-2xl text-white hover:border-white hover:bg-white/0 duration-500 border-[#0276FF] border-4">{ele.button}</button>
+                                <Link href={'tel:+33771710513'} className="bg-[#0276FF]  p-4 font-medium text-2xl text-white hover:border-white hover:bg-white/0 duration-500 border-[#0276FF] border-4 flex gap-2 items-center"><Phone size={30} /> {ele.button}</Link>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
+              
             </div>
         </div>
     );

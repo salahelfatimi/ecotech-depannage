@@ -7,8 +7,9 @@ import { useState } from "react";
 export default function AboutUs(){
     const [counterOn,setcounterOn]=useState(false)
     return(
-        <div id="qui-sommes-nous" className="flex flex-col gap-10 py-14 ">
-            <div className=" container flex flex-col lg:flex-row justify-between gap-16  items-center">
+        <div id="qui-sommes-nous" className="flex flex-col gap-10 py-28 relative ">
+            <div className="rounded-full-css bg-[#0276FF] w-full h-16 bottom-0 absolute rotate-180 z-10 "></div>
+            <div className=" relative z-20 container flex flex-col lg:flex-row justify-between gap-16  items-center">
                 <Image 
                 src={imageabout} 
                 width={5150}
@@ -35,20 +36,20 @@ export default function AboutUs(){
             
             </div>
             <ScrollTrigger onEnter={()=>(setcounterOn(true))} >
-                <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-16 container justify-between items-center   ">
-                    <div className="bg-[#0276FF] py-4 flex gap-4 flex-col items-center">
+                <div className=" relative z-20  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-16 container justify-between items-center   ">
+                    <div className="bg-[#0276FF] rounded-xl py-4 flex gap-4 flex-col items-center">
                         <span className=" bg-[#fff] p-4 font-medium  text-2xl xl:text-4xl w-fit text-[#0276FF]">{ counterOn ? <CountUp duration={10} start={1} end={35}   suffix=" +"/>:0}</span>
                         <h3 className=" font-medium text-2xl text-white xl:text-3xl">Équipe qualifiée</h3>
                     </div>
-                    <div className=" bg-[#0276FF] py-4 flex gap-4 flex-col items-center">
+                    <div className=" bg-[#0276FF] rounded-xl py-4 flex gap-4 flex-col items-center">
                         <span className=" bg-[#fff] p-4 font-medium text-2xl xl:text-4xl w-fit text-[#0276FF]">{ counterOn ? <CountUp duration={10} start={1} end={2500}   suffix=""/>:0}</span>
                         <h3 className=" font-medium text-2xl  text-white xl:text-3xl">Clients satisfaits</h3>
                     </div>
-                    <div className="bg-[#0276FF] py-4 flex gap-4 flex-col items-center">
+                    <div className="bg-[#0276FF] rounded-xl py-4 flex gap-4 flex-col items-center">
                         <span className=" bg-[#fff] p-4 font-medium  text-2xl xl:text-4xl w-fit text-[#0276FF]">{ counterOn ? <CountUp duration={10} start={1} end={30}   suffix=" min"/>:0}</span>
                         <h3 className=" font-medium text-2xl text-white xl:text-3xl text-center">Temps de réponse</h3>
                     </div>
-                    <div className="bg-[#0276FF] py-4 flex gap-4 flex-col items-center">
+                    <div className="bg-[#0276FF] rounded-xl py-4 flex gap-4 flex-col items-center">
                         <span className=" bg-[#fff] p-4 font-medium  text-2xl xl:text-4xl w-fit text-[#0276FF]">{ counterOn ? <CountUp duration={10} start={1} end={100}   suffix=" +"/>:0}</span>
                         <h3 className=" font-medium text-2xl text-white xl:text-3xl">Zones couvertes</h3>
                     </div>

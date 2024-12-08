@@ -47,25 +47,28 @@ export default function Service(){
     ];
     
     return(
-        <div id="nos-services" className="bg-[#F4F8FF] py-8 ">
-            <div className=" container flex flex-col gap-4">
+        <div id="nos-services" className="bg-[#F4F8FF] py-28 relative z-20 ">
+            <div className="rounded-full-css bg-[#0276FF] w-full h-16 top-0 absolute  z-10 "></div>
+            <div className="rounded-full-css bg-[#0276FF] w-full h-16 bottom-0 absolute rotate-180 z-10 "></div>
+
+            <div className="relative z-20 container flex flex-col gap-4">
                 <h2 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h2>
                 <p className=" p-4 text-center text-2xl xl:text-3xl text-black ">Notre champs d&apos;intervention</p>
                 <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center  justify-center">
                     {
                         service.map((ele,index)=>(
-                            <div key={index} className="last:col-start-1  xl:last:col-start-2 flex flex-col justify-between  gap-6 bg-white h-full rounded-xl ">
+                            <div key={index} className="last:col-start-1  xl:last:col-start-2 flex flex-col  p-2 gap-6 bg-[#0276FF] h-full rounded-3xl ">
                                 <Image 
                                 src={ele.image} 
                                 placeholder="blur"
                                 title={ele.title}
-                                className=" object-cover w-full  h-[300px] "
+                                className=" object-cover w-full rounded-3xl  h-[300px] "
                                 alt={ele.title}
                                 />
                                 
-                                <div className=" flex flex-col items-center gap-6 text-center p-4 ">
-                                    <h3 className=" text-[#0276FF] font-medium text-2xl ">{ele.title}</h3>
-                                    <p className="  text-lg">{ele.description}</p>
+                                <div className=" flex flex-col items-center  gap-6 text-center  ">
+                                    <h3 className=" text-white font-medium text-2xl ">{ele.title}</h3>
+                                    <p className=" text-white text-lg">{ele.description}</p>
                                 </div>
                                 {/* <Link href={'/'} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-b-md ">voir plus</Link> */}
                             </div>

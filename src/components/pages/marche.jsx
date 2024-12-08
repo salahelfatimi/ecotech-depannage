@@ -4,7 +4,9 @@ import delivery from '/public/marche/delivery.png';
 import solved from '/public/marche/solved.png';
 export default function Marche(){
     return(
-        <div id='comment-ca-marche' className="bg-cover bg-center bg-[url('/marche/bg.png')]">
+        <div id='comment-ca-marche' className="bg-cover bg-center bg-[#0276FF] relative">
+            <div className="rounded-full-css bg-[#F4F8FF] w-full h-16 bottom-0 absolute rotate-180 z-10 "></div>
+
             <div  className="container py-24 gap-6 items-center flex justify-center flex-col  ">
                 <h2 className="font-semibold text-3xl xl:text-6xl text-[#fff] text-center">COMMENT ÇA MARCHE ?</h2>
                 <p className=" p-4 text-center font-medium text-2xl xl:text-4xl text-white ">Notre intervention, conçue pour votre tranquillité </p>

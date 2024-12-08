@@ -72,7 +72,8 @@ export default function Contact(){
         });
     };
     return(
-        <div id="contactez-nous" className=" flex  bg-[#F4F8FF]  flex-col py-8  items-center justify-center  ">
+        <div id="contactez-nous" className=" relative flex  bg-[#F4F8FF]  flex-col py-8  items-center justify-center  ">
+            <div className="rounded-full-css bg-[#0276FF] w-full h-6 bottom-0 absolute rotate-180 z-10 "></div>
             <Toaster
                 toastOptions={{
                     className: " bg-[#1e1e1e] text-[#0276FF]",
@@ -81,7 +82,7 @@ export default function Contact(){
             <h2 className="font-semibold text-3xl xl:text-6xl bg-[#0276FF] text-white p-4 text-center">contactez-nous</h2>
             <div className=" container w-full flex-col xl:flex-row  gap-16 py-16 xl:px-24 flex p-8  justify-between items-center ">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d774.5827725917268!2d7.070357967467168!3d49.1059266189007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47943577c85cc675%3A0xd3a85d8c7e61142a!2s57200%20Sarreguemines%2C%20France!5e1!3m2!1sen!2sma!4v1723206219374!5m2!1sen!2sma"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41791.68581510561!2d7.0708527!3d49.1060135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bdf96730baaa2f7%3A0x71c424678d801d0b!2sEcoTech%20D%C3%A9pannage!5e0!3m2!1sen!2sma!4v1733657228103!5m2!1sen!2sma"
                     width="1000" // Adjust width as needed
                     height="500"
                     className=" xl:w-1/2 w-full "
