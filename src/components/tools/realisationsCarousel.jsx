@@ -7,7 +7,7 @@ import AutoScroll from "embla-carousel-auto-scroll";
 export default function RealisationsCarousel({ direction, startImage, limiteImage }) {
   // Initialize the carousel with auto-scroll
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    AutoScroll({ stopOnInteraction: false, speed: 0.5, direction: direction }),
+    AutoScroll({ stopOnInteraction: false, speed: 0.6, direction: direction }),
   ]);
 
   return (
@@ -24,7 +24,7 @@ export default function RealisationsCarousel({ direction, startImage, limiteImag
               width={400}
               height={400}
               alt={`Realisation ${ele}`}
-              className="ml-10 h-80 object-cover bg-white p-2 rounded-3xl"
+              className="ml-10 h-72 object-cover bg-white p-2 rounded-3xl"
               title="Nos Réalisations"
             />
           ))}
