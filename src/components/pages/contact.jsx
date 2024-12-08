@@ -32,8 +32,7 @@ export default function Contact(){
         if (
         formData.fullName &&
         formData.phone &&
-        formData.purpose &&
-        formData.msg
+        formData.purpose
         ) {
         setIsLoading(true);
         const loadingToast = toast.loading("Envoi en cours...");
@@ -101,7 +100,7 @@ export default function Contact(){
                             <p className="text-red-500 text-xs font-medium">{!formData.phone &&validation &&"Veuillez entrer votre numéro de téléphone."}</p>
                         </div>
                         <div className=" flex flex-col gap-2 w-full">
-                            <select value={formData.purpose} onChange={handleInputChange} name="purpose" id="purpose" className={`${!formData.purpose && validation && "border-red-500 text-red-500"}  rounded  h-14 px-4 border-[#0276FF] text-[#0276FF] capitalize border-2 bg-[#F4F8FF] font-medium   text-bold`} >
+                            <select value={formData.purpose} onChange={handleInputChange} name="purpose" id="purpose" className={` rounded  h-14 px-4 border-[#0276FF] text-[#0276FF] capitalize border-2 bg-[#F4F8FF] font-medium   text-bold`} >
                                 <option value={''} >objectif</option>
                                 <option value="Vitrerie & Miroiterie" >Vitrerie & Miroiterie</option>
                                 <option value="Plomberie">Plomberie</option>
