@@ -100,7 +100,7 @@ export default function Contact(){
                             <p className="text-red-500 text-xs font-medium">{!formData.phone &&validation &&"Veuillez entrer votre numéro de téléphone."}</p>
                         </div>
                         <div className=" flex flex-col gap-2 w-full">
-                            <select value={formData.purpose} onChange={handleInputChange} name="purpose" id="purpose" className={` rounded  h-14 px-4 border-[#0276FF] text-[#0276FF] capitalize border-2 bg-[#F4F8FF] font-medium   text-bold`} >
+                            <select value={formData.purpose} onChange={handleInputChange} name="purpose" id="purpose" className={`${!formData.purpose && validation && "border-red-500 text-red-500"}  rounded  h-14 px-4 border-[#0276FF] text-[#0276FF] capitalize border-2 bg-[#F4F8FF] font-medium   text-bold`} >
                                 <option value={''} >objectif</option>
                                 <option value="Vitrerie & Miroiterie" >Vitrerie & Miroiterie</option>
                                 <option value="Plomberie">Plomberie</option>
@@ -114,8 +114,7 @@ export default function Contact(){
                             <p className="text-red-500 text-xs font-medium">{!formData.purpose &&validation &&"Sélectionnez votre objectif."}</p>
                         </div>
                         <div className=" flex flex-col gap-2 w-full">
-                            <textarea value={formData.msg} onChange={handleInputChange}  placeholder=" Votre Message "  className={`${!formData.msg && validation && "border-red-500 placeholder:text-red-500 "}   placeholder:font-medium capitalize placeholder:text-[#0276FF] text-[#22242B] p-4 rounded   border-[#0276FF] border-2 bg-[#F4F8FF]`} rows={6} name="msg" id=""></textarea>
-                            <p className="text-red-500 text-xs font-medium">{!formData.msg &&validation &&"Veuillez sélectionner le but de Votre Message."}</p>
+                            <textarea value={formData.msg} onChange={handleInputChange}  placeholder=" Votre Message "  className={`  placeholder:font-medium capitalize placeholder:text-[#0276FF] text-[#22242B] p-4 rounded   border-[#0276FF] border-2 bg-[#F4F8FF]`} rows={6} name="msg" id=""></textarea>
                         </div>
                         <button type="submit" className="bg-[#0276FF] py-4 hover:text-[#0276FF] hover:bg-[#F4F8FF] border-2 border-[#0276FF] duration-500 font-medium text-white "> {isLoading ? "Envoi en cours..." : 'Envoyer'} </button>
                     
