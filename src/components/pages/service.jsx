@@ -30,11 +30,6 @@ export default function Service(){
             image: Chauffage
         },
         {
-            title: 'Bornes De Recharge',
-            description: "Confiez l’installation de vos bornes de recharge à EcoTech Dépannage. Nos experts fournissent à Sarreguemines un service rapide et professionnel pour répondre à tous vos besoins en mobilité électrique.",
-            image: installationBorneDeRecharge
-        },
-        {
             title: 'Serrurerie',
             description: "Perte de clés ou porte bloquée ? Nos serruriers interviennent en urgence à Sarreguemines et ses environs pour l'ouverture de porte et le remplacement de serrure, avec une intervention garantie sous 30 minutes, disponible 24 heures sur 24, 7 jours sur 7.",
             image: Serrurerie
@@ -57,7 +52,7 @@ export default function Service(){
                 <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center  justify-center">
                     {
                         service.map((ele,index)=>(
-                            <div key={index} className="last:col-start-1  xl:last:col-start-2 flex flex-col  p-2 gap-6 bg-[#0276FF] h-full rounded-3xl ">
+                            <div key={index} className=" flex flex-col  p-2 gap-6 bg-[#0276FF] h-full rounded-3xl ">
                                 <Image 
                                 src={ele.image} 
                                 placeholder="blur"
