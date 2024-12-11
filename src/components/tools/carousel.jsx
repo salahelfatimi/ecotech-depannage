@@ -46,20 +46,13 @@ export default function Carousel() {
         },
         { 
             id: 5, 
-            button: 'Installer Borne de Recharge', 
-            image: Recharge, 
-            title: "Bornes de Recharge", 
-            description: 'Installation et réparation de bornes de recharge pour véhicules électriques. Service rapide et fiable.' 
-        },
-        { 
-            id: 6, 
             button: 'Urgence Serrurerie', 
             image: Locksmith, 
             title: "Intervention Serrurerie", 
             description: 'Dépannage rapide en cas de perte de clés ou d’effraction. Interventions 24/7 en 30 minutes.' 
         },
         { 
-            id: 7, 
+            id: 6, 
             button: 'Réparation Vitrerie', 
             image: Vitrerie, 
             title: "Dépannage Vitrerie", 
