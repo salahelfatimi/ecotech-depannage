@@ -49,29 +49,7 @@ export default function RootLayout({ children }) {
         {/* Google Tag Manager */}
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_ID_MANAGER} />
 
-        {/* Google Ads Global Site Tag */}
-        <Script 
-          async 
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16782332928" 
-        />
-        <Script id="google-ads-gtag">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'AW-16782332928');
-          `}
-        </Script>
-
-        {/* Conversion Event Tracking */}
-        <Script id="google-ads-conversion">
-          {`
-            gtag('event', 'conversion', {
-              'send_to': 'AW-16782332928/TjtCCI_S4fQZEICouMI-',
-              'phone_conversion_number': '+33 7 71 71 05 13'
-            });
-          `}
-        </Script>
+       
 
 
       </head>
