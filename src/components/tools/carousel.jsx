@@ -14,16 +14,24 @@ import Vitrerie from "/public/carousel/Vitrerie.png";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
-export default function Carousel() {
-    const [isSubmitted, setIsSubmitted] = useState(false); 
-    useEffect(() => {
-        if (isSubmitted && window.gtag) {
-          window.gtag('event', 'conversion', {
-            'send_to': 'AW-16782332928/39X-CIvP9PEZEICouMI-', 
-          });
-        }
-      }, [isSubmitted]);
+function gtag_report_conversion(url) {
+    const callback = () => {
+      if (typeof url !== "undefined") {
+        window.location = url;
+      }
+    };
+    if (window.gtag) {
+      window.gtag("event", "conversion", {
+        send_to: "AW-16782332928/yCXGCJnks_gZEICouMI-",
+        value: 1.0,
+        currency: "MAD",
+        event_callback: callback,
+      });
+    }
+    return false;
+  }
 
+export default function Carousel() {
     const slider = [
         { 
             id: 1, 
@@ -83,7 +91,15 @@ export default function Carousel() {
                             <div key={index} className={` absolute inset-0 container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center justify-center flex-col `}>
                                 <h2  className="bg-white rounded p-2 font-medium text-lg md:text-2xl text-[#0276FF]">Réservation en ligne, par téléphone et mail</h2>
                                 <p className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</p>
-                                <Link onClick={()=>(setIsSubmitted(true))} href={'tel:+33771710513'} className="bg-[#0276FF] w-fit rounded-full  py-2 px-4 font-medium text-2xl text-white duration-500  flex gap-2 items-center group"><div className="bg-white rounded-full group-hover:animate-pulse p-2"><Phone size={30} className="  stroke-[#0276FF]" /></div> +33 7 71 71 05 13</Link>
+                                <button
+                                    onClick={() => gtag_report_conversion("tel:+33771710513")}
+                                    className="bg-[#0276FF] w-fit rounded-full py-2 px-4 font-medium text-2xl text-white duration-500 flex gap-2 items-center group"
+                                    >
+                                    <div className="bg-white rounded-full group-hover:animate-pulse p-2">
+                                        <Phone size={30} className="stroke-[#0276FF]" />
+                                    </div>
+                                    +33 7 71 71 05 13
+                                    </button>                            
                             </div>
                         </div>
                     ))}

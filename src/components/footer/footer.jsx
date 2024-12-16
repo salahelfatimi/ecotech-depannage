@@ -1,5 +1,23 @@
+'use client'
 import { Facebook, Instagram, Linkedin, Mail, Map, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+
+function gtag_report_conversion(url) {
+  const callback = () => {
+    if (typeof url !== "undefined") {
+      window.location = url;
+    }
+  };
+  if (window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: "AW-16782332928/yCXGCJnks_gZEICouMI-",
+      value: 1.0,
+      currency: "MAD",
+      event_callback: callback,
+    });
+  }
+  return false;
+}
 
 export default function Footer(){
     return(
@@ -9,7 +27,7 @@ export default function Footer(){
            
             <Link href={'https://maps.app.goo.gl/gtaWxSsq7yA2k8fk9'} target="_blank" className=" flex gap-4"><MapPin size={30} className=" stroke-[#fff]" /><span className=" text-xl items-center font-medium capitalize text-center lg:text-start text-white ">Sarreguemines, France</span></Link>
             <Link href={'mailto:ecotech.depannage@gmail.com'}  className=" flex gap-4"><Mail size={30} className=" stroke-[#fff]" /><span className=" text-xl items-center font-medium  text-center lg:text-start text-white ">ecotech.depannage@gmail.com</span></Link>
-            <Link href={'tel:+33771710513'} className=" flex gap-4"><Phone size={30} className=" stroke-[#fff]" /><span className=" text-xl items-center font-medium capitalize text-center lg:text-start text-white ">+33 7 71 71 05 13</span></Link>
+            <button onClick={() => gtag_report_conversion("tel:+33771710513")}  className=" flex gap-4"><Phone size={30} className=" stroke-[#fff]" /><span className=" text-xl items-center font-medium capitalize text-center lg:text-start text-white ">+33 7 71 71 05 13</span></button>
 
             
             </div>

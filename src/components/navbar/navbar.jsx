@@ -4,17 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 
+function gtag_report_conversion(url) {
+    const callback = () => {
+      if (typeof url !== "undefined") {
+        window.location = url;
+      }
+    };
+    if (window.gtag) {
+      window.gtag("event", "conversion", {
+        send_to: "AW-16782332928/yCXGCJnks_gZEICouMI-",
+        value: 1.0,
+        currency: "MAD",
+        event_callback: callback,
+      });
+    }
+    return false;
+  }
 export default function Navbar() {
     const [open, setOpen] = useState(true);
     const [activeSection, setActiveSection] = useState("");
-    const [isSubmitted, setIsSubmitted] = useState(false); 
-    useEffect(() => {
-        if (isSubmitted && window.gtag) {
-          window.gtag('event', 'conversion', {
-            'send_to': 'AW-16782332928/39X-CIvP9PEZEICouMI-', 
-          });
-        }
-    }, [isSubmitted]);
     
     const itemNav = useMemo(() => [
         { title: 'Accueil', href: '#accueil' },
@@ -58,7 +66,7 @@ export default function Navbar() {
                         <span className="font-semibold text-white animate-pulse">7/7 J - 24/24 H</span>
                         <div className="flex gap-6 justify-between">
                             <Link href={'https://maps.app.goo.gl/zS1ehuqbdPCdptEy9'} className="flex gap-2 font-medium text-white items-center"><MapPin size={25} /><span className="lg:block hidden " >Moselle, France</span></Link>
-                            <Link onClick={()=>(setIsSubmitted(true))} href={'tel:+33771710513'} className="flex gap-2 font-medium text-white items-center"><Phone size={25} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></Link>
+                            <button onClick={() => gtag_report_conversion("tel:+33771710513")}  className="flex gap-2 font-medium text-white items-center"><Phone size={25} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></button>
                         </div>
                     </div>
                 </div>
