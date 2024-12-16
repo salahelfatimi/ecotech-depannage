@@ -11,12 +11,12 @@ export default function Service(){
     const service = [
         {
             title: 'Electricité',
-            description: 'Vous recherchez un électricien compétent pour la réparation rapide de pannes électriques ou la mise aux normes de votre tableau électrique ? Nos professionnels assurent des interventions sécurisées dans toute la région de Sarreguemines et ses environs. Contactez-nous pour un service rapide et fiable.',
+            description: 'Vous recherchez un électricien compétent pour la réparation rapide de pannes électriques ou la mise aux normes de votre tableau électrique ? Nos professionnels assurent des interventions sécurisées et ses environs. Contactez-nous pour un service rapide et fiable.',
             image: Electricite
         },
         {
             title: 'Plomberie',
-            description: "En cas de fuites d'eau, de toilettes bouchées, ou de pannes d'eau chaude, nos plombiers expérimentés interviennent rapidement. Disponibles 24/7, nous garantissons des réparations efficaces pour tous vos besoins en plomberie à Sarreguemines.",
+            description: "En cas de fuites d'eau, de toilettes bouchées, ou de pannes d'eau chaude, nos plombiers expérimentés interviennent rapidement. Disponibles 24/7, nous garantissons des réparations efficaces pour tous vos besoins en plomberie .",
             image: Plomberie
         },
         {
@@ -31,7 +31,7 @@ export default function Service(){
         },
         {
             title: 'Serrurerie',
-            description: "Perte de clés ou porte bloquée ? Nos serruriers interviennent en urgence à Sarreguemines et ses environs pour l'ouverture de porte et le remplacement de serrure, avec une intervention garantie sous 30 minutes, disponible 24 heures sur 24, 7 jours sur 7.",
+            description: "Perte de clés ou porte bloquée ? Nos serruriers interviennent en urgence  et ses environs pour l'ouverture de porte et le remplacement de serrure, avec une intervention garantie sous 30 minutes, disponible 24 heures sur 24, 7 jours sur 7.",
             image: Serrurerie
         },
         {

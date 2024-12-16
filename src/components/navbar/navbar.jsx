@@ -49,7 +49,7 @@ export default function Navbar() {
                     <div className="container flex flex-row justify-between">
                         <span className="font-semibold text-white animate-pulse">7/7 J - 24/24 H</span>
                         <div className="flex gap-6 justify-between">
-                            <Link href={'https://maps.app.goo.gl/gtaWxSsq7yA2k8fk9'} className="flex gap-2 font-medium text-white items-center"><MapPin size={25} /><span className="lg:block hidden " >Sarreguemines, France</span></Link>
+                            <Link href={'https://maps.app.goo.gl/zS1ehuqbdPCdptEy9'} className="flex gap-2 font-medium text-white items-center"><MapPin size={25} /><span className="lg:block hidden " >Moselle, France</span></Link>
                             <Link href={'tel:+33771710513'} className="flex gap-2 font-medium text-white items-center"><Phone size={25} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></Link>
                         </div>
                     </div>

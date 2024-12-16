@@ -9,20 +9,20 @@ const fredoka = Fredoka({ subsets: ["hebrew"] });
 
 export const metadata = {
   title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
-  description: "EcoTech Dépannage, votre expert en dépannage à Sarreguemines, France. Vitrier, serrurier, plombier, et électricien, disponibles 7J/7, 24h/24 pour des interventions d'urgence. Contactez-nous au +33 7 71 71 05 13 pour un service rapide.",
+  description: "EcoTech Dépannage, the reliable repair service in Moselle, France, is your expert for emergency interventions. With a team of skilled glaziers, locksmiths, plumbers, and electricians, EcoTech Dépannage provides 24/7 availability for urgent repairs. Whether it's a broken window, a jammed lock, a plumbing issue, or an electrical fault, their team of professionals is ready to resolve your problems quickly and efficiently.",
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
   keywords: [
     "plombier urgence", "Dépannage plomberie", "urgence plomberie", "urgence plombier", 
-    "plombier Sarreguemines", "Dépannage Sarreguemines", "vitrier Sarreguemines", 
-    "serrurier Sarreguemines", "plombier Sarreguemines", "électricien Sarreguemines", 
+    "plombier ", "Dépannage ", "vitrier ", 
+    "serrurier ", "plombier ", "électricien ", 
     "intervention d'urgence", "service 24h/24", "EcoTech Dépannage", "dépannage d'urgence 24h/24", 
-    "dépannage 7j/7 Sarreguemines", "plombier urgence Sarreguemines", "serrurier urgence Sarreguemines", 
-    "vitrier Sarreguemines urgence", "électricien Sarreguemines 24h/24", "intervention rapide Sarreguemines", 
-    "EcoTech Dépannage urgence", "réparation écologique Sarreguemines"
+    "dépannage 7j/7 ", "plombier urgence ", "serrurier urgence ", 
+    "vitrier  urgence", "électricien  24h/24", "intervention rapide ", 
+    "EcoTech Dépannage urgence", "réparation écologique "
   ],
   openGraph: {
     title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
-    description: "EcoTech Dépannage, votre expert en dépannage à Sarreguemines, France. Vitrier, serrurier, plombier, et électricien, disponibles 7J/7, 24h/24 pour des interventions d'urgence. Contactez-nous au +33 7 71 71 05 13 pour un service rapide.",
+    description: "EcoTech Dépannage, the reliable repair service in Moselle, France, is your expert for emergency interventions. With a team of skilled glaziers, locksmiths, plumbers, and electricians, EcoTech Dépannage provides 24/7 availability for urgent repairs. Whether it's a broken window, a jammed lock, a plumbing issue, or an electrical fault, their team of professionals is ready to resolve your problems quickly and efficiently.",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     siteName: "EcoTech Dépannage",
     images: [
