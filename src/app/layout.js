@@ -42,28 +42,10 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <head>
         <meta property="og:url" content={`https://www.ecotechdepannage.com`} />
-        
         {/* Google Analytics */}
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID} />
-        
         {/* Google Tag Manager */}
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_ID_MANAGER} />
-        
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16782332928"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-16782332928'); // Tracks a page view automatically
-            `,
-          }}
-        />
-    
-       
-
-
       </head>
       <body className={`${fredoka.className} scrollbar scrollbar-thumb-[#0276FF]`}>
         <div className="flex flex-col h-screen justify-between ">
