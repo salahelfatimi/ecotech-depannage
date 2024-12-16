@@ -4,6 +4,7 @@ import guarantee from "/public/gridHome/guarantee.png";
 import Interventionrapide from "/public/gridHome/Interventionrapide.png";
 import quality from "/public/gridHome/quality.png";
 import Carousel from "../tools/carousel";
+import Head from "next/head";
 export default function HomePage(){
     const grid=[
         {title:'Intervention rapide',image:Interventionrapide },
@@ -14,6 +15,20 @@ export default function HomePage(){
   
     return(
         <div className=" " id="accueil">
+             <Head>
+                {/* Google Analytics */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16782332928"></script>
+                <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'AW-16782332928');
+                    `,
+                }}
+                />
+            </Head>
            <Carousel/>
            
             <div className="p-10 ">
