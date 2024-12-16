@@ -14,17 +14,6 @@ export default  function Home() {
   
   return (
     <main className=" flex flex-col ">
-      <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16782332928"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16782332928');
-          `
-        }} />
-      </Head>
       <PhoneIcon/>
       <HomePage/>
       <AboutUs/>

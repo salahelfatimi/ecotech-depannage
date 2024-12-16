@@ -1,6 +1,5 @@
 'use client'
 import { MessageCircle, Phone } from "lucide-react";
-import Head from "next/head";
 
 function gtag_report_conversion(url) {
   const callback = () => {
@@ -22,17 +21,6 @@ function gtag_report_conversion(url) {
 export default function PhoneIcon(){
     return(
         <div className=" z-40 flex gap-2 items-center  animate-bounce  fixed bottom-4 right-4 ">
-        <Head>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16782332928"></script>
-          <script dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-16782332928');
-            `
-          }} />
-      </Head>
         <span className="   text-sm  text-center text-[#0276FF] select-none  bg-[#ebf0f8] rounded-full items-center justify-center py-2 px-4">
             <div>Avez vous besoin d&apos;aide? </div>
             <strong>Messagez-nous</strong>
