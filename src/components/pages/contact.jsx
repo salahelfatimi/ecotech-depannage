@@ -82,7 +82,7 @@ export default function Contact(){
             <h2 className="font-semibold text-3xl xl:text-6xl bg-[#0276FF] text-white p-4 text-center">contactez-nous</h2>
             <div className=" container w-full flex-col xl:flex-row  gap-16 py-16 xl:px-24 flex p-8  justify-between items-center ">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23116671.224635303!2d1.976208586137306!3d53.39853181008196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bdf96730baaa2f7%3A0x71c424678d801d0b!2sEcoTech%20D%C3%A9pannage!5e1!3m2!1sen!2sma!4v1734384612528!5m2!1sen!2sma"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666501.903565049!2d6.366652359801688!3d49.14119806353051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bdf96730baaa2f7%3A0x71c424678d801d0b!2sEcoTech%20D%C3%A9pannage!5e1!3m2!1sen!2sma!4v1734644443894!5m2!1sen!2sma"
                     width="1000" // Adjust width as needed
                     height="500"
                     className=" xl:w-1/2 w-full "
