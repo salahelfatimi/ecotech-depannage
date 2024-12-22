@@ -1,5 +1,5 @@
 "use client"
-import { ChevronLeft, ChevronRight, Phone } from "lucide-react"
+import { ChevronLeft, ChevronRight, File, Phone } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
 import useEmblaCarousel from "embla-carousel-react";
@@ -91,15 +91,27 @@ export default function Carousel() {
                             <div  className={` absolute inset-0 container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center justify-center flex-col `}>
                                 <h2  className="bg-white rounded p-2 font-medium text-lg md:text-2xl text-[#0276FF]">Réservation en ligne, par téléphone et mail</h2>
                                 <p className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</p>
-                                <button
-                                    onClick={() => gtag_report_conversion("tel:+33771710513")}
-                                    className="bg-[#0276FF] w-fit rounded-full py-2 px-4 font-medium text-2xl text-white duration-500 flex gap-2 items-center group"
-                                    >
-                                    <div className="bg-white rounded-full group-hover:animate-pulse p-2">
-                                        <Phone size={30} className="stroke-[#0276FF]" />
-                                    </div>
-                                    +33 7 71 71 05 13
-                                    </button>                            
+                                <div className="flex lg:flex-row flex-col gap-4 items-center justify-center">
+                                    <button
+                                        onClick={() => gtag_report_conversion("tel:+33771710513")}
+                                        className="bg-[#0276FF] w-fit rounded-full py-2 px-4 font-medium text-xl text-white duration-500 flex gap-2 items-center group"
+                                        >
+                                        <div className="bg-white rounded-full group-hover:animate-pulse p-2">
+                                            <Phone size={25} className="stroke-[#0276FF]" />
+                                        </div>
+                                        +33 7 71 71 05 13
+                                    </button> 
+                                    <button
+                                        onClick={() => gtag_report_conversion("https://wa.me/+33771710513")}
+                                        className="bg-[#EA7B36] w-fit rounded-full py-2 px-4 font-medium text-xl text-white duration-500 flex gap-2 items-center group"
+                                        >
+                                        <div className="bg-white rounded-full group-hover:animate-pulse p-2">
+                                            <File size={25} className="stroke-[#EA7B36]" />
+                                        </div>
+                                        Devis gratuit
+                                    </button>      
+                                </div>
+                                                    
                             </div>
                         </div>
                     ))}

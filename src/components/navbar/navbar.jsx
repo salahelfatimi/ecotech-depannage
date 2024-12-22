@@ -1,5 +1,5 @@
 'use client'
-import { MapPin, Menu, Phone, X } from "lucide-react";
+import { File, MapPin, Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
@@ -61,12 +61,13 @@ export default function Navbar() {
     return (
         <div>
             <div className="fixed z-50 right-0 left-0">
-                <div className="bg-[#0276FF] p-4">
-                    <div className="container flex flex-row justify-between">
+                <div className="bg-[#0276FF] p-2">
+                    <div className="container flex flex-row justify-between items-center">
                         <span className="font-semibold text-white animate-pulse">7/7 J - 24/24 H</span>
-                        <div className="flex gap-6 justify-between">
-                            <Link href={'https://maps.app.goo.gl/zS1ehuqbdPCdptEy9'} className="flex gap-2 font-medium text-white items-center"><MapPin size={25} /><span className="lg:block hidden " >Moselle, France</span></Link>
-                            <button onClick={() => gtag_report_conversion("tel:+33771710513")}  className="flex gap-2 font-medium text-white items-center"><Phone size={25} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></button>
+                        <div className="flex gap-2 justify-between">
+                            <Link href={'https://maps.app.goo.gl/zS1ehuqbdPCdptEy9'} className="flex bg-white py-2 px-4 rounded-full gap-2 font-medium text-[#0276FF] items-center"><MapPin size={20} /><span className="lg:block hidden " >Moselle, France</span></Link>
+                            <button onClick={() => gtag_report_conversion("tel:+33771710513")}  className="flex gap-2 font-medium bg-white py-2 px-4 rounded-full  text-[#0276FF] items-center"><Phone size={20} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></button>
+                            <button onClick={() => gtag_report_conversion("https://wa.me/+33771710513")}  className="flex bg-[#EA7B36] py-2 px-4 rounded-full gap-2 font-medium text-white items-center"><File size={20} /><span className="lg:block hidden " > Devis gratuit </span></button>
                         </div>
                     </div>
                 </div>
