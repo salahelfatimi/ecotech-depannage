@@ -22,9 +22,9 @@ export default function Navbar() {
                     <div className="container flex flex-row justify-between items-center">
                         <span className="font-semibold text-white animate-pulse">7/7 J - 24/24 H</span>
                         <div className="flex gap-2 justify-between">
-                            <Link href={'https://maps.app.goo.gl/9c9pP89Bc2p9pdUG6'} className="flex bg-white py-2 px-4 rounded-full gap-2 font-medium text-[#0276FF] items-center"><MapPin size={20} /><span className="lg:block hidden " >Moselle, France</span></Link>
-                            <Link href={'tel:+33771710513'}   className="flex gap-2 font-medium bg-white py-2 px-4 rounded-full  text-[#0276FF] items-center"><Phone size={20} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></Link>
-                            <Link href={'https://wa.me/+33771710513'}  className="flex bg-[#EA7B36] py-2 px-4 rounded-full gap-2 font-medium text-white items-center"><File size={20} /><span className="lg:block hidden " > Devis gratuit </span></Link>
+                            <Link target="_blank" href={'https://maps.app.goo.gl/9c9pP89Bc2p9pdUG6'} className="flex bg-white py-2 px-4 rounded-full gap-2 font-medium text-[#0276FF] items-center"><MapPin size={20} /><span className="lg:block hidden " >Moselle, France</span></Link>
+                            <Link target="_blank" href={'tel:+33771710513'}   className="flex gap-2 font-medium bg-white py-2 px-4 rounded-full  text-[#0276FF] items-center"><Phone size={20} /><span className="lg:block hidden " >+33 7 71 71 05 13</span></Link>
+                            <Link target="_blank" href={'https://wa.me/+33771710513'}  className="flex bg-[#EA7B36] py-2 px-4 rounded-full gap-2 font-medium text-white items-center"><File size={20} /><span className="lg:block hidden " > Devis gratuit </span></Link>
                         </div>
                     </div>
                 </div>

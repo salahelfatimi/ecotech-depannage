@@ -1,5 +1,5 @@
 "use client"
-import { File, Link, Phone } from "lucide-react"
+import { File, Phone } from "lucide-react"
 
 import useEmblaCarousel from "embla-carousel-react";
 import Electricite from "/public/carousel/Electricite.png";
@@ -10,6 +10,7 @@ import Locksmith from "/public/carousel/Locksmith.png";
 import Vitrerie from "/public/carousel/Vitrerie.png";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 export default function Carousel() {
     const slider = [
@@ -73,6 +74,7 @@ export default function Carousel() {
                                 <h2 className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</h2>
                                 <div className="flex lg:flex-row flex-col gap-4 items-center justify-center">
                                     <Link
+                                        target="_blank"
                                         href="tel:+33771710513"
                                         className="bg-[#0276FF] w-fit rounded-full py-2 px-4 font-medium text-xl text-white duration-500 flex gap-2 items-center group"
                                         >
@@ -82,6 +84,7 @@ export default function Carousel() {
                                         +33 7 71 71 05 13
                                     </Link> 
                                     <Link
+                                        target="_blank"
                                         href="https://wa.me/+33771710513"
                                         className="bg-[#EA7B36] w-fit rounded-full py-2 px-4 font-medium text-xl text-white duration-500 flex gap-2 items-center group"
                                         >
