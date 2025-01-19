@@ -69,6 +69,7 @@ export default function Contact(){
         [name]: value,
         });
     };
+
     
     return(
         <div id="contactez-nous" className=" relative flex  bg-[#F4F8FF]  flex-col py-8  items-center justify-center pt-40  ">
