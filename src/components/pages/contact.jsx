@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 export default function Contact(){
     const [isLoading, setIsLoading] = useState(false);
     const [validation, setValidation] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false); 
     const [formData, setFormData] = useState({
         fullName: "",
         phone: "",
@@ -13,14 +12,6 @@ export default function Contact(){
         msg:""
     });
     
-
-    useEffect(() => {
-      if (isSubmitted && window.gtag) {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-16782332928/39X-CIvP9PEZEICouMI-', 
-        });
-      }
-    }, [isSubmitted]);
 
     const sendEmail = async (e) => {
         e.preventDefault();
@@ -51,7 +42,6 @@ export default function Contact(){
             });
             setValidation(false);
             setIsLoading(false);
-            setIsSubmitted(true);
             toast.dismiss(loadingToast);
             toast.success("Message envoyé avec succès !");
             }
@@ -70,7 +60,7 @@ export default function Contact(){
         });
     };
 
-    
+
     return(
         <div id="contactez-nous" className=" relative flex  bg-[#F4F8FF]  flex-col py-8  items-center justify-center pt-40  ">
             <div className="rounded-full-css bg-[#0276FF] w-full h-6 bottom-0 absolute rotate-180 z-10 "></div>
