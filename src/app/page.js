@@ -4,6 +4,7 @@ import HomePage from "@/components/pages/home";
 import Marche from "@/components/pages/marche";
 import Realisations from "@/components/pages/realisations";
 import Service from "@/components/pages/service";
+import MessageCookies from "@/components/tools/cookies/message";
 import PhoneIcon from "@/components/tools/phoneIcon";
 
 export async function generateMetadata() {
@@ -38,6 +39,7 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <main className="flex flex-col">
+      <MessageCookies/>
       <PhoneIcon />
       <HomePage />
       <AboutUs />

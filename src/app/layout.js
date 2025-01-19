@@ -2,9 +2,6 @@ import { Fredoka } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import Script from 'next/script';  // Add this import
-
 const fredoka = Fredoka({ subsets: ["hebrew"] });
 
 export const metadata = {
@@ -40,10 +37,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <head>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID} />
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_ID_MANAGER} />
-      </head>
       <body className={`${fredoka.className} scrollbar scrollbar-thumb-[#0276FF]`}>
         <div className="flex flex-col h-screen justify-between ">
           <Navbar />
