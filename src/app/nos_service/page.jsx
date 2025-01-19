@@ -102,8 +102,8 @@ export default function Nos_Service(){
             </div>
             <div className="flex flex-col items-center justify-center gap-8 container">
               {services.map((service, index) => (
-                <div key={index} className=" flex lg:flex-row flex-col items-center justify-center  lg:even:flex-row-reverse lg:w-[90%] bg-[#0276FF]  lg:p-2">
-                    <Image src={service.image} alt={service.title} width={400} height={250} className="lg:w-96 lg:h-96 h-96 w-full object-cover " />
+                <div key={index} className=" flex lg:flex-row flex-col items-center justify-center  lg:even:flex-row-reverse lg:w-[90%] bg-[#0276FF] rounded-xl  lg:p-2">
+                    <Image src={service.image} alt={service.title} width={400} height={250} className=" h-96 w-full object-cover rounded-xl  " />
                     <div className=" w-full flex flex-col p-4 gap-6 ">
                         <div className=" h-1/2 ">
                             <h2 className="text-4xl font-semibold text-white mb-4">{service.title}</h2>

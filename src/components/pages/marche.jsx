@@ -4,7 +4,7 @@ import delivery from '/public/marche/delivery.png';
 import solved from '/public/marche/solved.png';
 export default function Marche(){
     return(
-        <div id='comment-ca-marche' className="bg-cover bg-center bg-[#0276FF] relative">
+        <div id='comment-ca-marche' className="bg-cover bg-center bg-[#1E1E1E] relative">
          
 
             <div  className="container py-24 gap-6 items-center flex justify-center flex-col  ">

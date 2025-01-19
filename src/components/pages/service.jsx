@@ -50,9 +50,9 @@ export default function Service(){
     return(
         <div id="nos-services" className="bg-[#F4F8FF] py-28 relative z-20 ">
             <div className="rounded-full-css bg-[#0276FF] w-full h-16 top-0 absolute  z-10 "></div>
-            <div className="rounded-full-css bg-[#0276FF] w-full h-16 bottom-0 absolute rotate-180 z-10 "></div>
+            <div className="rounded-full-css bg-[#1E1E1E] w-full h-16 bottom-0 absolute rotate-180 z-10 "></div>
 
-            <div className="relative z-20 container flex flex-col gap-4">
+            <div className="relative z-20 container flex flex-col items-center gap-4">
                 <h2 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h2>
                 <p className=" p-4 text-center text-2xl xl:text-3xl text-black ">Notre champs d&apos;intervention</p>
                 <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center  justify-center">
@@ -69,8 +69,6 @@ export default function Service(){
                         ))
                     }
                 </div>
-                <Link href={`/nos_service`} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-xl ">voir service</Link>
-
             </div>
            
         </div>

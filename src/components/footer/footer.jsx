@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer(){
     return(
       <footer className="flex flex-col " >
-        <div className="bg-[#1E1E1E] py-8 ">
+        <div className="bg-[#0276FF] py-8 ">
             <div className=" flex flex-col gap-4 lg:flex-row items-center justify-between  container ">
            
             <Link href={'https://maps.app.goo.gl/9c9pP89Bc2p9pdUG6'} target="_blank" className=" flex gap-4"><MapPin size={30} className=" stroke-[#fff]" /><span className=" text-xl items-center font-medium capitalize text-center lg:text-start text-white ">Moselle, France</span></Link>
@@ -16,11 +16,11 @@ export default function Footer(){
             
             </div>
         </div>
-        <div className="bg-[#0276FF] py-8">
+        <div className="bg-[#1E1E1E] py-8">
             <div className=" flex flex-col gap-4 lg:flex-row items-center justify-center  container ">
             <p className={`select-none flex  flex-col lg:flex-row gap-1  text-xl items-center font-medium capitalize text-center lg:text-start text-white `}>
                 Copyright &copy; {new Date().getFullYear()} . Touts les droits sont réservés 
-                <span className=" text-[#1E1E1E]   ">
+                <span className=" text-[#0276FF]   ">
                   EcoTech Dépannage
                 </span>
             </p>
