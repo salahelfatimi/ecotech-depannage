@@ -7,7 +7,7 @@ import { useState, useMemo } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(true);
-    const [activeSection, setActiveSection] = useState("");
+    const [activeSection, setActiveSection] = useState("/");
     
     const itemNav =  [
         { title: 'Accueil', href: '/' },
@@ -38,7 +38,7 @@ export default function Navbar() {
                             <ul className="flex gap-10 items-center ">
                                 {itemNav.map((ele, index) => (
                                     <Link href={ele.href} key={index} className={`font-medium ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : ''}`}>
-                                        <button >{ele.title}</button>
+                                        <button  onClick={() => {setActiveSection(ele.href)}} >{ele.title}</button>
                                     </Link>
                                 ))}
                             </ul>
@@ -50,9 +50,9 @@ export default function Navbar() {
                             </button>
                             <div className="flex flex-col items-center gap-12 text-2xl font-medium">
                                 {itemNav.map((ele, index) => (
-                                    <button key={index}  className={` text-xl hover:duration-700 transition font-medium ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : 'hover:text-[#0276FF] text-black'}`} onClick={() => {handleClick(ele.href), setOpen(!open)}}>
+                                    <Link href={ele.href} key={index}  className={` text-xl hover:duration-700 transition font-medium ${activeSection === ele.href ? 'bg-[#0276FF]  text-white p-2' : 'hover:text-[#0276FF] text-black'}`} onClick={() => {setActiveSection(ele.href), setOpen(true)}}>
                                         {ele.title}
-                                    </button>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
