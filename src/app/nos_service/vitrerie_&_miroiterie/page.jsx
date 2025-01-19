@@ -108,12 +108,12 @@ export default function VitrerieMiroiterieService() {
             </li>
             <li>
               <strong>Service Fiable et Professionnel :</strong> Nous mettons un
-              point d'honneur à respecter les délais et à offrir un service
+              point d&apos;honneur à respecter les délais et à offrir un service
               soigné.
             </li>
           </ul>
           <h2 className="text-2xl font-semibold text-[#0276FF] mb-4">
-            Contactez-nous Aujourd'hui !
+            Contactez-nous Aujourd&apos;hui !
           </h2>
           <p className="text-gray-600 text-lg mb-6">
             Ne laissez pas un vitrage cassé nuire à la sécurité et à l&apos;esthétique
