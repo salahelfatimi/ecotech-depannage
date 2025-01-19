@@ -8,8 +8,8 @@ import Script from 'next/script';  // Add this import
 const fredoka = Fredoka({ subsets: ["hebrew"] });
 
 export const metadata = {
-  title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
-  description: "EcoTech Dépannage, the reliable repair service in Moselle, France, is your expert for emergency interventions. With a team of skilled glaziers, locksmiths, plumbers, and electricians, EcoTech Dépannage provides 24/7 availability for urgent repairs. Whether it's a broken window, a jammed lock, a plumbing issue, or an electrical fault, their team of professionals is ready to resolve your problems quickly and efficiently.",
+  title: { template: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7 | %s" },
+  description: "EcoTech Dépannage, le service de réparation fiable en Moselle, France, est votre expert pour les interventions d'urgence. Avec une équipe de vitriers, serruriers, plombiers et électriciens qualifiés, EcoTech Dépannage vous garantit une disponibilité 24h/24 et 7j/7 pour les réparations urgentes. Qu'il s'agisse d'une vitre cassée, d'une serrure bloquée, d'un problème de plomberie ou d'une panne électrique, leur équipe de professionnels est prête à résoudre vos problèmes rapidement et efficacement.",
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
   keywords: [
     "plombier urgence", "Dépannage plomberie", "urgence plomberie", "urgence plombier", 
@@ -22,7 +22,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
-    description: "EcoTech Dépannage, the reliable repair service in Moselle, France, is your expert for emergency interventions. With a team of skilled glaziers, locksmiths, plumbers, and electricians, EcoTech Dépannage provides 24/7 availability for urgent repairs. Whether it's a broken window, a jammed lock, a plumbing issue, or an electrical fault, their team of professionals is ready to resolve your problems quickly and efficiently.",
+    description: "EcoTech Dépannage, le service de réparation fiable en Moselle, France, est votre expert pour les interventions d'urgence. Avec une équipe de vitriers, serruriers, plombiers et électriciens qualifiés, EcoTech Dépannage vous garantit une disponibilité 24h/24 et 7j/7 pour les réparations urgentes. Qu'il s'agisse d'une vitre cassée, d'une serrure bloquée, d'un problème de plomberie ou d'une panne électrique, leur équipe de professionnels est prête à résoudre vos problèmes rapidement et efficacement.",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     siteName: "EcoTech Dépannage",
     images: [
@@ -40,29 +40,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      
-      <Script
-        id="fb-pixel"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
-            fbq('track', 'PageView');
-          `,
-      }}/>
       <head>
-        <meta property="og:url" content={`https://www.ecotechdepannage.com`} />
-        {/* Google Analytics */}
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID} />
-        {/* Google Tag Manager */}
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_ID_MANAGER} />
       </head>
       <body className={`${fredoka.className} scrollbar scrollbar-thumb-[#0276FF]`}>

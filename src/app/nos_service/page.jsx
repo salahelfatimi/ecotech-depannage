@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import Electricite from "/public/service/electricite.jpg";
 import Plomberie from "/public/service/plomberie.jpg";
 import Climatisation from "/public/service/climatisation.jpg";
@@ -6,8 +6,9 @@ import Chauffage from "/public/service/chauffage.jpg";
 import Serrurerie from "/public/service/serrurerie.jpg";
 import VitrerieMiroiterie from "/public/service/vitrerie-&-Miroiterie.jpg";
 import Link from "next/link";
-export default function Service(){
-    const service = [
+
+export default function Nos_Service(){
+    const services = [
         {
             title: 'Electricité',
             description: 'Vous recherchez un électricien compétent pour la réparation rapide de pannes électriques ou la mise aux normes de votre tableau électrique ? Nos professionnels assurent des interventions sécurisées et ses environs. Contactez-nous pour un service rapide et fiable.',
@@ -46,33 +47,43 @@ export default function Service(){
             url:'vitrerie_&_miroiterie'
         },
     ];
-    
-    return(
-        <div id="nos-services" className="bg-[#F4F8FF] py-28 relative z-20 ">
-            <div className="rounded-full-css bg-[#0276FF] w-full h-16 top-0 absolute  z-10 "></div>
-            <div className="rounded-full-css bg-[#0276FF] w-full h-16 bottom-0 absolute rotate-180 z-10 "></div>
-
-            <div className="relative z-20 container flex flex-col gap-4">
-                <h2 className="font-bold text-3xl xl:text-6xl text-[#0276FF] text-center">Nos services</h2>
-                <p className=" p-4 text-center text-2xl xl:text-3xl text-black ">Notre champs d&apos;intervention</p>
-                <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 items-center  justify-center">
-                    {
-                        service.map((ele,index)=>(
-                            <div key={index} className=" flex flex-col justify-between  p-2 gap-6 bg-[#0276FF] h-full rounded-xl ">
-                                <Image src={ele.image} placeholder="blur" title={ele.title} className=" object-cover w-full rounded-3xl  h-[300px] " alt={ele.title} />
-                                <div className=" flex flex-col items-center  gap-6 text-center  ">
-                                    <h3 className=" text-white font-medium text-2xl ">{ele.title}</h3>
-                                    <p className=" text-white text-lg">{ele.description}</p>
-                                </div>
-                                <Link href={`/nos_service/${ele.url}`} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-xl ">voir plus</Link>
-                            </div>
-                        ))
-                    }
+      
+    return (
+        <div className="bg-gray-100 py-10 ">
+            <div className=" mx-auto flex flex-col gap-10">
+                <div className="relative h-screen min-w-full w-full">
+                    <div className="bg-black opacity-60 inset-0 absolute"></div>
+                    <Image
+                        width={1920}
+                        height={1080}
+                        src="/carousel/bg.png"
+                        alt="Services Multi-Experts 24h/24 - Électricité, Plomberie, Serrurerie, Climatisation, Chauffage et Vitrerie"
+                        className="object-cover object-left-bottom h-screen min-w-full w-full"
+                        title="Services Multi-Experts 24h/24 - Électricité, Plomberie, Serrurerie, Climatisation, Chauffage et Vitrerie"
+                    />
+                    <div className="absolute inset-0 container text-center space-y-1 p-2 rounded-xl md:space-y-4 flex items-center justify-center flex-col">
+                    <h1 className="font-black text-2xl md:text-6xl text-white text-center">
+                        Services Multi-Experts 24h/24 - Électricité, Plomberie, Serrurerie, Climatisation, Chauffage et Vitrerie            
+                    </h1>
                 </div>
-                <Link href={`/nos_service`} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-xl ">voir service</Link>
-
             </div>
-           
+            <div className="flex flex-col items-center justify-center gap-8 container">
+              {services.map((service, index) => (
+                <div key={index} className=" flex lg:flex-row flex-col items-center justify-center  lg:even:flex-row-reverse lg:w-[90%] bg-[#0276FF]  lg:p-2">
+                    <Image src={service.image} alt={service.title} width={400} height={250} className="lg:w-96 lg:h-96 h-96 w-full object-cover " />
+                    <div className=" w-full flex flex-col p-4 gap-6 ">
+                        <div className=" h-1/2 ">
+                            <h2 className="text-4xl font-semibold text-white mb-4">{service.title}</h2>
+                            <p className="text-white ">{service.description}</p>
+                        </div>
+                        <Link href={`/nos_service/${service.url}`} className="bg-[#0276FF] py-4 text-center text-white hover:bg-white hover:text-[#0276FF] duration-500 border-4 border-white hover:border-[#0276FF] uppercase font-semibold rounded-xl w-full ">voir plus</Link>
+
+                    </div>
+                   
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-    )
+    );
 }

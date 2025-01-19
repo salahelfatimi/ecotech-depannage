@@ -1,9 +1,7 @@
 "use client"
-import { ChevronLeft, ChevronRight, File, Phone } from "lucide-react"
-import Link from "next/link"
-import { useEffect, useState, useRef } from "react"
+import { File, Phone } from "lucide-react"
+
 import useEmblaCarousel from "embla-carousel-react";
-import AutoScroll from "embla-carousel-auto-scroll";
 import Electricite from "/public/carousel/Electricite.png";
 import Climatisation from "/public/carousel/Climatisation.png";
 import Plomberie from "/public/carousel/Plomberie.png";
@@ -89,8 +87,8 @@ export default function Carousel() {
                         <div key={index} className=" relative h-screen min-w-full w-full">
                             <Image  src={ele.image} alt={ele.title} className="  object-cover object-top  h-screen min-w-full w-full" placeholder="blur" title={ele.title} />
                             <div  className={` absolute inset-0 container text-center space-y-1  p-2 rounded-xl md:space-y-4 flex items-center justify-center flex-col `}>
-                                <h2  className="bg-white rounded p-2 font-medium text-lg md:text-2xl text-[#0276FF]">Réservation en ligne, par téléphone et mail</h2>
-                                <p className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</p>
+
+                                <h2 className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</h2>
                                 <div className="flex lg:flex-row flex-col gap-4 items-center justify-center">
                                     <button
                                         onClick={() => gtag_report_conversion("tel:+33771710513")}

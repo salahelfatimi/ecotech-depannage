@@ -15,22 +15,7 @@ export default function HomePage(){
   
     return(
         <div className=" " id="accueil">
-             <Head>
-                {/* Google Analytics */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16782332928"></script>
-                <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'AW-16782332928');
-                    `,
-                }}
-                />
-            </Head>
            <Carousel/>
-           
             <div className="p-10 ">
                 <div  className=" container  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-9 lg:flex-row justify-between items-center ">
                     {
