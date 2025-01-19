@@ -42,7 +42,7 @@ export default function VitrerieMiroiterieService() {
         <Image
           width={1920}
           height={1080}
-          src="/service/vitrerie-miroiterie.jpg"
+          src="/service/vitrerie-&-Miroiterie.jpg"
           alt="Vitrerie & Miroiterie – Réparation et Installation"
           className="object-cover object-top h-screen min-w-full w-full"
           title="Vitrerie & Miroiterie – Réparation et Installation"
