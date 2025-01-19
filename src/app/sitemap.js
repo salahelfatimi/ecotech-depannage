@@ -1,8 +1,4 @@
-
-
 export default async function sitemap() {
- 
-
   return [
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
@@ -32,16 +28,13 @@ export default async function sitemap() {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/nos_service/chauffage`,
       lastModified: new Date(),
     },
-    ,
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/nos_service/serrurerie`,
       lastModified: new Date(),
     },
-    ,
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/nos_service/vitrerie_&_miroiterie`,
       lastModified: new Date(),
     },
-    
   ];
 }
