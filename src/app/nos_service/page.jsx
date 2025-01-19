@@ -7,6 +7,39 @@ import Serrurerie from "/public/service/serrurerie.jpg";
 import VitrerieMiroiterie from "/public/service/vitrerie-&-Miroiterie.jpg";
 import Link from "next/link";
 
+export  function generateMetadata() {
+    return {
+      title: "Services Multi-Experts",
+      alternates: {
+        canonical: "/nos_service",
+      },
+      openGraph: {
+        title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7 | Services Multi-Experts",
+        description: "EcoTech Dépannage offre des services d'urgence 24h/24 et 7j/7 en Électricité, Plomberie, Climatisation, Chauffage, Serrurerie et Vitrerie. Nos experts interviennent rapidement pour résoudre tous vos problèmes techniques avec des solutions fiables et efficaces, garantissant votre satisfaction et sécurité.",
+        url:`${process.env.NEXT_PUBLIC_BASE_URL}/nos_service`,
+        robots: {
+          index: true,
+          follow: true,
+        },
+        siteName: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
+        images: [
+          {
+            url: `/opengraph-image.jpg`,
+            secureUrl: `/opengraph-image.jpg`,
+            width: 1200,
+            height: 675,
+            alt: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7 | Services Multi-Experts",
+          }
+        ],
+        type: "website",
+      
+      },
+      
+     
+    };
+   
+  }
+  
 export default function Nos_Service(){
     const services = [
         {

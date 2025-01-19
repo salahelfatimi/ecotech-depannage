@@ -11,7 +11,7 @@ export default function Navbar() {
     
     const itemNav =  [
         { title: 'Accueil', href: '/' },
-        { title: 'Nos services', href: 'nos_service' },
+        { title: 'Nos services', href: '/nos_service' },
         { title: 'Contactez-nous', href: '/contact' }
     ];
 
