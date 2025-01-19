@@ -1,33 +1,15 @@
 "use client"
-import { File, Phone } from "lucide-react"
+import { File, Link, Phone } from "lucide-react"
 
 import useEmblaCarousel from "embla-carousel-react";
 import Electricite from "/public/carousel/Electricite.png";
 import Climatisation from "/public/carousel/Climatisation.png";
 import Plomberie from "/public/carousel/Plomberie.png";
 import Chauffage from "/public/carousel/Chauffage.png";
-import Recharge from "/public/carousel/Recharge.png";
 import Locksmith from "/public/carousel/Locksmith.png";
 import Vitrerie from "/public/carousel/Vitrerie.png";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
-
-function gtag_report_conversion(url) {
-    const callback = () => {
-      if (typeof url !== "undefined") {
-        window.location = url;
-      }
-    };
-    if (window.gtag) {
-      window.gtag("event", "conversion", {
-        send_to: "AW-16782332928/yCXGCJnks_gZEICouMI-",
-        value: 1.0,
-        currency: "MAD",
-        event_callback: callback,
-      });
-    }
-    return false;
-  }
 
 export default function Carousel() {
     const slider = [
@@ -90,24 +72,24 @@ export default function Carousel() {
 
                                 <h2 className="font-medium text-2xl md:text-4xl text-white text-center">{ele.description}</h2>
                                 <div className="flex lg:flex-row flex-col gap-4 items-center justify-center">
-                                    <button
-                                        onClick={() => gtag_report_conversion("tel:+33771710513")}
+                                    <Link
+                                        href="tel:+33771710513"
                                         className="bg-[#0276FF] w-fit rounded-full py-2 px-4 font-medium text-xl text-white duration-500 flex gap-2 items-center group"
                                         >
                                         <div className="bg-white rounded-full group-hover:animate-pulse p-2">
                                             <Phone size={25} className="stroke-[#0276FF]" />
                                         </div>
                                         +33 7 71 71 05 13
-                                    </button> 
-                                    <button
-                                        onClick={() => gtag_report_conversion("https://wa.me/+33771710513")}
+                                    </Link> 
+                                    <Link
+                                        href="https://wa.me/+33771710513"
                                         className="bg-[#EA7B36] w-fit rounded-full py-2 px-4 font-medium text-xl text-white duration-500 flex gap-2 items-center group"
                                         >
                                         <div className="bg-white rounded-full group-hover:animate-pulse p-2">
                                             <File size={25} className="stroke-[#EA7B36]" />
                                         </div>
                                         Devis gratuit
-                                    </button>      
+                                    </Link>      
                                 </div>
                                                     
                             </div>
