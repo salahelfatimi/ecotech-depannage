@@ -35,7 +35,7 @@ export const metadata = {
 export default function PolitiqueConfidentialite() {
   return (
     <>
-      <div className="bg-white container">
+      <div className="bg-white container pt-40">
         <div
           className={`${fredoka.className} p-6 text-black lg:text-base text-xs md:text-sm text-justify container`}
         >
