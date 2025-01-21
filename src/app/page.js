@@ -10,6 +10,7 @@ import PhoneIcon from "@/components/tools/phoneIcon";
 export async function generateMetadata() {
   return {
     title: "EcoTech Dépannage | Dépannage d'urgence 24h/24 et 7j/7",
+    description: "EcoTech Dépannage, le service de réparation fiable en Moselle, France, est votre expert pour les interventions d'urgence. Avec une équipe de vitriers, serruriers, plombiers et électriciens qualifiés, EcoTech Dépannage vous garantit une disponibilité 24h/24 et 7j/7 pour les réparations urgentes. Qu'il s'agisse d'une vitre cassée, d'une serrure bloquée, d'un problème de plomberie ou d'une panne électrique, leur équipe de professionnels est prête à résoudre vos problèmes rapidement et efficacement.",
     alternates: {
       canonical: "/",
     },

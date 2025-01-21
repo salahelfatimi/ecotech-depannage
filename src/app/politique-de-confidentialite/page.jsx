@@ -10,22 +10,21 @@ export const metadata = {
     canonical: "/politique-de-confidentialite",
   },
   openGraph: {
-    title: "TRAFIC GENIUS | Politique de Confidentialité",
-    description:
-      "Découvrez comment Trafic Genius gère vos données personnelles et respecte votre vie privée sur ce site.",
+    title: "EcoTech Dépannage | Politique de Confidentialité",
+    description:"EcoTech Dépannage, le service de réparation fiable en Moselle, France, est votre expert pour les interventions d'urgence. Avec une équipe de vitriers, serruriers, plombiers et électriciens qualifiés, EcoTech Dépannage vous garantit une disponibilité 24h/24 et 7j/7 pour les réparations urgentes. Qu'il s'agisse d'une vitre cassée, d'une serrure bloquée, d'un problème de plomberie ou d'une panne électrique, leur équipe de professionnels est prête à résoudre vos problèmes rapidement et efficacement.",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}/politique-de-confidentialite`,
     robots: {
       index: true,
       follow: true,
     },
-    siteName: "TRAFIC GENIUS | Politique de Confidentialité",
+    siteName: "EcoTech Dépannage | Politique de Confidentialité",
     images: [
       {
         url: `/opengraph-image.jpg`,
         secureUrl: `/opengraph-image.jpg`,
         width: 1200,
         height: 675,
-        alt: `TRAFIC GENIUS`,
+        alt: `EcoTech Dépannage`,
       },
     ],
     type: "website",
