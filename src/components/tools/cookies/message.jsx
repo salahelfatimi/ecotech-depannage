@@ -1,8 +1,8 @@
 'use client'
 
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google"
 import Link from "next/link";
 import { useEffect, useState } from "react"
+import { GoogleAnalytics, GoogleTagManager } from "./google";
 
 export default function MessageCookies() {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
@@ -13,6 +13,8 @@ export default function MessageCookies() {
     setIsVisible(false);
     if (typeof window !== "undefined") {
       localStorage.setItem("cookiesAccepted", accepted);
+      const event = new CustomEvent("cookiesConsentChanged", { detail: accepted });
+      window.dispatchEvent(event);
     }
   };
 
@@ -27,6 +29,7 @@ export default function MessageCookies() {
       }
     }
   }, []);
+
     return (
       <>
         {isVisible && (
@@ -42,13 +45,10 @@ export default function MessageCookies() {
               </div>
             </div>
         )}
-        {cookiesAccepted && (
           <>
-            <GoogleAnalytics gaId='G-8KB4WW4NV5' />
-            <GoogleTagManager gtmId='GTM-KDDWRPQK' />
-
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS_ID} />
+            <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_ID_MANAGER} />
           </>
-        )}
       </>
     );
   }
