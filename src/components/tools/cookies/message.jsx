@@ -46,7 +46,7 @@ export default function MessageCookies() {
             </div>
         )}
           <>
-            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS_ID} />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID} />
             <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_MEASUREMENT_ID_MANAGER} />
           </>
       </>
