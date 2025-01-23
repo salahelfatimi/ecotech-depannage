@@ -6,6 +6,7 @@ import Chauffage from "/public/service/chauffage.jpg";
 import Serrurerie from "/public/service/serrurerie.jpg";
 import VitrerieMiroiterie from "/public/service/vitrerie-&-Miroiterie.jpg";
 import Link from "next/link";
+import MessageCookies from "@/components/tools/cookies/message";
 
 export  function generateMetadata() {
     return {
@@ -84,6 +85,7 @@ export default function Nos_Service(){
       
     return (
         <div className="bg-gray-100 py-10 ">
+           <MessageCookies/>
             <div className=" mx-auto flex flex-col gap-10">
                 <div className="relative h-screen min-w-full w-full">
                     <div className="bg-black opacity-60 inset-0 absolute"></div>

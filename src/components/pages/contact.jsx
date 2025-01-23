@@ -1,6 +1,7 @@
 "use client";
 import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
+import MessageCookies from "../tools/cookies/message";
 
 export default function Contact(){
     const [isLoading, setIsLoading] = useState(false);
@@ -63,6 +64,7 @@ export default function Contact(){
 
     return(
         <div id="contactez-nous" className=" relative flex  bg-[#F4F8FF]  flex-col py-8  items-center justify-center pt-40  ">
+            <MessageCookies/>
             <div className="rounded-full-css bg-[#0276FF] w-full h-6 bottom-0 absolute rotate-180 z-10 "></div>
             <Toaster
                 toastOptions={{

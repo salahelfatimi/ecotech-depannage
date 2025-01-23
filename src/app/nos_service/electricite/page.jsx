@@ -1,4 +1,5 @@
 // pages/electricite.js
+import MessageCookies from "@/components/tools/cookies/message";
 import RealisationsCarousel from "@/components/tools/realisationsCarousel";
 import Image from "next/image";
 
@@ -39,6 +40,7 @@ export  function generateMetadata() {
 export default function ElectriciteService() {
   return (
     <div className="bg-gray-100 py-10">
+      <MessageCookies/>
       <div className="">
         <div className=" relative h-screen min-w-full w-full">
             <div className="bg-black opacity-60 inset-0 absolute"></div>

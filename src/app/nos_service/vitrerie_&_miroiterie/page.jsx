@@ -1,3 +1,4 @@
+import MessageCookies from "@/components/tools/cookies/message";
 import Image from "next/image";
 
 export function generateMetadata() {
@@ -37,6 +38,7 @@ export function generateMetadata() {
 export default function VitrerieMiroiterieService() {
   return (
     <div className="bg-gray-100 py-10">
+      <MessageCookies/>
       <div className="relative h-screen min-w-full w-full">
         <div className="bg-black opacity-60 inset-0 absolute"></div>
         <Image
