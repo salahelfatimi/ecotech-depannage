@@ -75,7 +75,7 @@ export default function Carousel() {
                                 <div className="flex lg:flex-row flex-col gap-4 items-center justify-center">
                                     <Link
                                         target="_blank"
-                                        href="tel:+33771710513"
+                                        href="https://wa.me/+33771710513"
                                         className="bg-[#0276FF] w-fit rounded-full py-2 px-4 font-medium text-xl text-white duration-500 flex gap-2 items-center group"
                                         >
                                         <div className="bg-white rounded-full group-hover:animate-pulse p-2">
