@@ -9,10 +9,6 @@ export default async function sitemap() {
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/nos_service`,
-      lastModified: new Date(),
-    },
-    {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/nos_service/electricite`,
       lastModified: new Date(),
     },
