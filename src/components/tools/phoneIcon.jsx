@@ -1,22 +1,8 @@
 'use client'
 import { MessageCircle, Phone } from "lucide-react";
+import Link from "next/link";
 
-function gtag_report_conversion(url) {
-  const callback = () => {
-    if (typeof url !== "undefined") {
-      window.location = url;
-    }
-  };
-  if (window.gtag) {
-    window.gtag("event", "conversion", {
-      send_to: "AW-16782332928/yCXGCJnks_gZEICouMI-",
-      value: 1.0,
-      currency: "MAD",
-      event_callback: callback,
-    });
-  }
-  return false;
-}
+
 
 export default function PhoneIcon(){
     return(
@@ -25,9 +11,9 @@ export default function PhoneIcon(){
             <div>Avez vous besoin d&apos;aide? </div>
             <strong>Messagez-nous</strong>
         </span>
-        <button onClick={() => gtag_report_conversion("https://wa.me/+33771710513")}  className="bg-green-600 w-fit p-4 rounded-full ">
+        <Link  target="_blank" href="https://wa.me/+33771710513"  className="bg-green-600 w-fit p-4 rounded-full ">
           <MessageCircle size={25} className=" stroke-white stroke-2"/>
-        </button>
+        </Link>
         
       </div>
     )
